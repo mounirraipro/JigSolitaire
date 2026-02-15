@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>JigSolitaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Menu -->
+    <div id="menu-screen" class="screen active">
+      <!-- Floating puzzle decorations -->
+      <div class="menu-float-tile" style="width:48px;height:40px;">
+        <svg viewBox="0 0 60 50" fill="rgba(232,97,77,0.12)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(232,97,77,0.18)" stroke-width="1" />
+        </svg>
+      </div>
+      <div class="menu-float-tile" style="width:42px;height:35px;">
+        <svg viewBox="0 0 60 50" fill="rgba(232,97,77,0.10)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(232,97,77,0.15)" stroke-width="1" />
+        </svg>
+      </div>
+      <div class="menu-float-tile" style="width:52px;height:43px;">
+        <svg viewBox="0 0 60 50" fill="rgba(200,189,178,0.15)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(200,189,178,0.2)" stroke-width="1" />
+        </svg>
+      </div>
+      <div class="menu-float-tile" style="width:38px;height:32px;">
+        <svg viewBox="0 0 60 50" fill="rgba(232,97,77,0.09)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(232,97,77,0.14)" stroke-width="1" />
+        </svg>
+      </div>
+      <div class="menu-float-tile" style="width:44px;height:37px;">
+        <svg viewBox="0 0 60 50" fill="rgba(232,97,77,0.08)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(232,97,77,0.12)" stroke-width="1" />
+        </svg>
+      </div>
+      <div class="menu-float-tile" style="width:36px;height:30px;">
+        <svg viewBox="0 0 60 50" fill="rgba(200,189,178,0.12)" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 0 L30 0 C30 0 28 8 35 8 C42 8 40 0 40 0 L60 0 L60 20 C60 20 52 18 52 25 C52 32 60 30 60 30 L60 50 L40 50 C40 50 42 42 35 42 C28 42 30 50 30 50 L10 50 L10 30 C10 30 18 32 18 25 C18 18 10 20 10 20 Z"
+            stroke="rgba(200,189,178,0.18)" stroke-width="1" />
+        </svg>
+      </div>
+
+      <div class="menu-header">
+        <div class="game-logo">JigSolitaire</div>
+        <div class="game-tagline">Jigsaw meets solitaire</div>
+        <button id="sound-toggle-menu" class="sound-toggle" aria-label="Toggle sound">
+          <svg id="sound-icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span id="sound-label-menu">Sound On</span>
+        </button>
+      </div>
+      <div id="category-grid" class="category-grid"></div>
+    </div>
+
+    <!-- Level Select -->
+    <div id="level-screen" class="screen">
+      <div class="screen-topbar">
+        <button id="back-to-menu" class="back-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          Categories
+        </button>
+      </div>
+      <div class="level-screen-header">
+        <div id="level-cat-img" class="level-cat-img"></div>
+        <h2 id="level-cat-name"></h2>
+        <p id="level-cat-desc" class="level-cat-desc"></p>
+      </div>
+      <div id="level-grid" class="level-grid"></div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <div class="game-toolbar">
+        <button id="back-to-levels" class="back-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          Levels
+        </button>
+        <div class="game-info">
+          <span id="game-level-title" class="game-level-title"></span>
+        </div>
+        <button id="sound-toggle-game" class="sound-toggle" aria-label="Toggle sound">
+          <svg id="sound-icon-game" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+        <div class="game-stats">
+          <span id="move-counter">0 moves</span>
+          <span class="stat-dot"></span>
+          <span id="timer">0:00</span>
+        </div>
+      </div>
+      <div class="game-layout">
+        <div class="ref-panel">
+          <span class="ref-label">Reference</span>
+          <canvas id="preview-canvas"></canvas>
+        </div>
+        <div class="board-panel">
+          <canvas id="game-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Win -->
+    <div id="win-screen" class="screen">
+      <div class="win-content">
+        <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+        <div class="win-check">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <circle cx="28" cy="28" r="26" stroke="#22c55e" stroke-width="2.5" />
+            <path d="M17 28L24 35L39 20" stroke="#22c55e" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="win-title">Puzzle Complete!</div>
+        <div class="win-stats">
+          <div class="win-stat">
+            <span class="win-stat-value" id="win-moves">0</span>
+            <span class="win-stat-label">moves</span>
+          </div>
+          <div class="win-stat">
+            <span class="win-stat-value" id="win-time">0:00</span>
+            <span class="win-stat-label">time</span>
+          </div>
+        </div>
+        <div class="win-actions">
+          <button id="next-level" class="btn-game btn-primary-game">Next Level</button>
+          <button id="play-again" class="btn-game btn-outline-game">Replay</button>
+          <button id="back-to-menu-win" class="btn-game btn-outline-game">Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="game.js"></script>
+</body>
+
+</html>
