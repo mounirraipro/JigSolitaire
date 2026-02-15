@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "JigSolitaire",
     title: "JigSolitaire – Free Online Jigsaw Solitaire Puzzle Game",
     description:
-      "Play JigSolitaire free online! Drag, drop, and swap tiles to restore beautiful images. 25+ levels across 5 categories.",
+      "jigsolitaire free online! Drag, drop, and swap tiles to restore beautiful images. 25+ levels across 5 categories.",
     url: "https://jigsolitaire.com",
   },
   twitter: {

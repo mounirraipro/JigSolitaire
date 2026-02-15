@@ -133,7 +133,7 @@ export default function CookiePolicyPage() {
                 <h2>Contact Us</h2>
                 <p>
                     If you have any questions about our use of cookies, please <a href="/contact">contact us</a>{' '}
-                    or email <strong>privacy@jigsolitaire.com</strong>.
+                    or email <strong>privacy@jigsolitaire.online</strong>.
                 </p>
             </div>
         </>

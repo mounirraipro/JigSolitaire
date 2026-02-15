@@ -36,7 +36,7 @@ export default function ContactPage() {
                         margin: '2rem 0',
                     }}>
                         {[
-                            { icon: '📧', label: 'Email', value: 'hello@jigsolitaire.com' },
+                            { icon: '📧', label: 'Email', value: 'hello@jigsolitaire.online' },
                             { icon: '⏱️', label: 'Response Time', value: 'Within 48 hours' },
                             { icon: '🌍', label: 'Available', value: 'Worldwide' },
                         ].map((item) => (

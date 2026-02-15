@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { categories } from './lib/gameData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jigsolitaire.com';
+  const baseUrl = 'https://jigsolitaire.online';
   const now = new Date();
 
   // Static pages

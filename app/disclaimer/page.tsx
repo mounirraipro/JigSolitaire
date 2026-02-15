@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
 
             <div className="page-content">
                 <p>
-                    The information provided by JigSolitaire (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) on jigsolitaire.com
+                    The information provided by JigSolitaire (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) on jigsolitaire.online
                     (the &ldquo;Site&rdquo;) is for general informational purposes only. All information on the Site
                     is provided in good faith; however, we make no representation or warranty of any kind,
                     express or implied, regarding the accuracy, adequacy, validity, reliability,
