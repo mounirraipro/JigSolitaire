@@ -15,6 +15,61 @@ export default function PlayPage() {
             <div className="play-layout">
                 {/* Game iframe */}
                 <main className="play-main">
+                    {/* Animated Background Layer */}
+                    <div 
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            backgroundImage: 'radial-gradient(circle at center, var(--nin-blue) 3px, transparent 3px)',
+                            backgroundSize: '40px 40px',
+                            opacity: 0.08,
+                            zIndex: 0,
+                            animation: 'demo-bg-scroll 25s linear infinite',
+                        }} 
+                    />
+                    <div 
+                        style={{
+                            position: 'absolute',
+                            top: '15%',
+                            left: '10%',
+                            width: '120px',
+                            height: '120px',
+                            background: 'var(--nin-yellow)',
+                            borderRadius: '50%',
+                            opacity: 0.15,
+                            animation: 'demo-float-1 8s ease-in-out infinite',
+                            zIndex: 0,
+                        }} 
+                    />
+                    <div 
+                        style={{
+                            position: 'absolute',
+                            bottom: '15%',
+                            right: '10%',
+                            width: '150px',
+                            height: '150px',
+                            background: 'var(--nin-red)',
+                            borderRadius: '30px',
+                            transform: 'rotate(15deg)',
+                            opacity: 0.1,
+                            animation: 'demo-float-2 12s ease-in-out infinite alternate',
+                            zIndex: 0,
+                        }} 
+                    />
+                    <div 
+                        style={{
+                            position: 'absolute',
+                            top: '40%',
+                            right: '25%',
+                            width: '60px',
+                            height: '60px',
+                            background: 'var(--nin-green)',
+                            borderRadius: '50%',
+                            opacity: 0.12,
+                            animation: 'demo-float-1 10s ease-in-out infinite reverse',
+                            zIndex: 0,
+                        }} 
+                    />
                     <iframe
                         src="/game/index.html"
                         title="JigSolitaire Game"

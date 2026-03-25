@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from './components/AdSlot';
 import HeroSection from './components/HeroSection';
+import MobileGamePreview from './components/MobileGamePreview';
 
 export const metadata: Metadata = {
   title: 'JigSolitaire – Free Online Jigsaw Solitaire Puzzle Game',
@@ -15,6 +16,87 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      {/* ── Mobile Game Demo (above hero) ── */}
+      <section
+        style={{
+          padding: '2rem 0 1rem',
+          borderBottom: '1px solid var(--border-light)',
+          background: 'var(--bg-secondary)',
+        }}
+      >
+        <div
+          style={{
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '1rem',
+            overflow: 'hidden',
+          }}
+        >
+          {/* Animated Background Layer */}
+          <div 
+            style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundImage: 'radial-gradient(circle at center, var(--nin-blue) 3px, transparent 3px)',
+              backgroundSize: '40px 40px',
+              opacity: 0.08,
+              zIndex: 0,
+              animation: 'demo-bg-scroll 25s linear infinite',
+            }} 
+          />
+          <div 
+            style={{
+              position: 'absolute',
+              top: '15%',
+              left: '15%',
+              width: '80px',
+              height: '80px',
+              background: 'var(--nin-yellow)',
+              borderRadius: '50%',
+              opacity: 0.15,
+              animation: 'demo-float-1 7s ease-in-out infinite',
+              zIndex: 0,
+            }} 
+          />
+          <div 
+            style={{
+              position: 'absolute',
+              bottom: '20%',
+              right: '15%',
+              width: '100px',
+              height: '100px',
+              background: 'var(--nin-red)',
+              borderRadius: '24px',
+              transform: 'rotate(15deg)',
+              opacity: 0.1,
+              animation: 'demo-float-2 10s ease-in-out infinite alternate',
+              zIndex: 0,
+            }} 
+          />
+          <div 
+            style={{
+              position: 'absolute',
+              top: '50%',
+              right: '25%',
+              width: '40px',
+              height: '40px',
+              background: 'var(--nin-green)',
+              borderRadius: '50%',
+              opacity: 0.12,
+              animation: 'demo-float-1 9s ease-in-out infinite reverse',
+              zIndex: 0,
+            }} 
+          />
+
+          {/* Centered Phone/Game */}
+          <div style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <MobileGamePreview />
+          </div>
+        </div>
+      </section>
+
       {/* ── Hero ── */}
       <HeroSection />
 
