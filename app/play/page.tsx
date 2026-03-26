@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import GameIframe from '../components/GameIframe';
+
 export const metadata: Metadata = {
     title: 'Play JigSolitaire – Free Online Puzzle Game',
     description: 'Play JigSolitaire free! Select a category, choose your level, and swap tiles to restore beautiful images. No downloads, no accounts needed.',
@@ -70,12 +72,10 @@ export default function PlayPage() {
                             zIndex: 0,
                         }} 
                     />
-                    <iframe
+                    <GameIframe
                         src="/game/index.html"
                         title="JigSolitaire Game"
                         className="play-iframe"
-                        allow="autoplay"
-                        loading="lazy"
                     />
                 </main>
             </div>

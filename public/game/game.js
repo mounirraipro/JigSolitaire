@@ -85,10 +85,15 @@
       this.playing = false;
       this.volume = 0.5;
       this.fadeDuration = 2000;
+      this._fadeInterval = null;
+      this._isLoading = false;
     }
 
     playRandom() {
       if (!this.playing) return;
+      if (this._isLoading) return; // Prevent concurrent loading of multiple tracks
+      
+      this._isLoading = true;
       let nextTrack;
       do {
         nextTrack = this.tracks[Math.floor(Math.random() * this.tracks.length)];
@@ -97,52 +102,85 @@
       const audio = new Audio(nextTrack);
       audio.volume = 0;
       audio.loop = false;
-      audio.addEventListener('ended', () => this.playRandom());
-      audio.addEventListener('error', () => setTimeout(() => this.playRandom(), 1000));
+      
+      // Cleanup previous fades to prevent conflicting intervals
+      if (this._fadeInterval) {
+        clearInterval(this._fadeInterval);
+        this._fadeInterval = null;
+      }
 
       const p = audio.play();
       if (p !== undefined) {
         p.then(() => {
-          this._fadeIn(audio);
-          if (this.currentAudio) this._fadeOut(this.currentAudio);
+          this._isLoading = false;
+          if (!this.playing) {
+            audio.pause();
+            return;
+          }
+          if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio.src = '';
+          }
           this.currentAudio = audio;
-        }).catch(() => {});
+          
+          this.currentAudio.addEventListener('ended', () => this.playRandom());
+          this.currentAudio.addEventListener('error', () => setTimeout(() => this.playRandom(), 1000));
+          
+          this._fadeIn(this.currentAudio);
+        }).catch(() => {
+          this._isLoading = false;
+        });
+      } else {
+        this._isLoading = false;
       }
     }
 
     _fadeIn(audio) {
-      const step = 0.02;
-      const interval = this.fadeDuration * step / this.volume;
-      const fade = setInterval(() => {
-        if (!this.playing) { audio.volume = 0; clearInterval(fade); return; }
-        if (audio.volume < this.volume) audio.volume = Math.min(this.volume, audio.volume + step);
-        else clearInterval(fade);
-      }, interval);
-    }
-
-    _fadeOut(audio) {
-      const step = 0.02;
-      const interval = this.fadeDuration * step / this.volume;
-      const fade = setInterval(() => {
-        if (audio.volume > 0) audio.volume = Math.max(0, audio.volume - step);
-        else { clearInterval(fade); audio.pause(); audio.src = ''; }
+      if (this._fadeInterval) clearInterval(this._fadeInterval);
+      const step = 0.05;
+      const interval = 100;
+      this._fadeInterval = setInterval(() => {
+        if (!this.playing || !audio) { 
+          if (audio) audio.volume = 0; 
+          clearInterval(this._fadeInterval); 
+          return; 
+        }
+        if (audio.volume < this.volume) {
+          audio.volume = Math.min(this.volume, audio.volume + step);
+        } else {
+          clearInterval(this._fadeInterval);
+        }
       }, interval);
     }
 
     start() {
       if (this.playing) return;
       this.playing = true;
-      this.playRandom();
+      if (this.currentAudio) {
+        this.currentAudio.play().catch(() => {});
+        this._fadeIn(this.currentAudio);
+      } else {
+        this.playRandom();
+      }
     }
 
     setMute(muted) {
       if (muted) {
         this.playing = false;
-        if (this.currentAudio) this.currentAudio.volume = 0;
+        if (this._fadeInterval) clearInterval(this._fadeInterval);
+        if (this.currentAudio) {
+          this.currentAudio.pause();
+          this.currentAudio.volume = 0;
+        }
       } else {
         this.playing = true;
-        if (this.currentAudio) { this.currentAudio.volume = this.volume; this.currentAudio.play().catch(() => {}); }
-        else this.start();
+        if (this.currentAudio) {
+          this.currentAudio.volume = this.volume;
+          const p = this.currentAudio.play();
+          if (p !== undefined) p.catch(() => {});
+        } else {
+          this.start();
+        }
       }
     }
   }
@@ -342,6 +380,84 @@
   }
   document.addEventListener('click', initAudio);
   document.addEventListener('touchstart', initAudio);
+
+  // ==========================================
+  // GLOBAL AUDIO CONTROLS
+  // ==========================================
+  const btnToggleMusic = document.getElementById('btn-toggle-music');
+  const musicVolumeSlider = document.getElementById('music-volume');
+  
+  if (btnToggleMusic && musicVolumeSlider) {
+    let isMuted = false;
+    
+    function updateMusicIcon() {
+      if (isMuted || music.volume === 0) {
+        btnToggleMusic.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        `;
+        btnToggleMusic.classList.add('is-muted');
+      } else {
+        btnToggleMusic.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        `;
+        btnToggleMusic.classList.remove('is-muted');
+      }
+    }
+
+    btnToggleMusic.addEventListener('click', (e) => {
+      e.stopPropagation();
+      initAudio(); // ensure audio context starts if not already
+      
+      isMuted = !isMuted;
+      if (isMuted) {
+        music.setMute(true);
+      } else {
+        if (music.volume === 0) {
+          music.volume = 0.5;
+          musicVolumeSlider.value = 0.5;
+        }
+        music.setMute(false);
+      }
+      updateMusicIcon();
+    });
+
+    musicVolumeSlider.addEventListener('input', (e) => {
+      e.stopPropagation();
+      initAudio(); // ensure audio context starts
+      
+      const val = parseFloat(e.target.value);
+      music.volume = val;
+      
+      if (val === 0) {
+        isMuted = true;
+        music.setMute(true);
+      } else {
+        isMuted = false;
+        music.setMute(false);
+        if (music.currentAudio) {
+          music.currentAudio.volume = val;
+        }
+      }
+      updateMusicIcon();
+    });
+    
+    // Also toggle slider container expansion nicely on mobile
+    btnToggleMusic.addEventListener('mouseenter', () => {
+      btnToggleMusic.parentElement.classList.add('active');
+    });
+    btnToggleMusic.parentElement.addEventListener('mouseleave', () => {
+      btnToggleMusic.parentElement.classList.remove('active');
+    });
+  }
 
   // ==========================================
   // SCREEN MANAGEMENT
