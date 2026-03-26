@@ -221,81 +221,46 @@
   }
 
   // ==========================================
-  // GAME DATA — ALL 3×3 ONLY
+  // GAME DATA — ALL 3×3 ONLY (NOW DYNAMIC)
   // ==========================================
-  // Each category has exactly 9 levels (cols:3, rows:3)
-  const CATEGORIES = [
-    {
-      slug: 'animals', name: 'Animals', color: '#ef4444', img: 'dog_cat.jpg',
-      levels: [
-        { id: 1,  title: 'Dog & Cat',      cols: 3, rows: 3, img: 'dog_cat.jpg' },
-        { id: 2,  title: 'Parrot',          cols: 3, rows: 3, img: 'parrot.jpg' },
-        { id: 3,  title: 'Black Dog',       cols: 3, rows: 3, img: 'black_dog.jpg' },
-        { id: 4,  title: 'White Horse',     cols: 3, rows: 3, img: 'white_horse.jpg' },
-        { id: 5,  title: 'Orange Hoodie',   cols: 3, rows: 3, img: 'dog_with_orange_hoodie.jpg' },
-        { id: 26, title: 'Birthday Dog',    cols: 3, rows: 3, img: 'dog_birthday.jpg' },
-        { id: 27, title: 'White Dog',       cols: 3, rows: 3, img: 'white_dog.jpg' },
-        { id: 28, title: 'Bird',            cols: 3, rows: 3, img: 'bird.jpg' },
-        { id: 51, title: 'Orange Dog',      cols: 3, rows: 3, img: 'orange_dog.jpg' },
-      ],
-    },
-    {
-      slug: 'nature', name: 'Nature', color: '#22c55e', img: 'lake.jpg',
-      levels: [
-        { id: 6,  title: 'Serene Lake',     cols: 3, rows: 3, img: 'lake.jpg' },
-        { id: 7,  title: 'Autumn Leaf',     cols: 3, rows: 3, img: 'Autumn_leaf.jpg' },
-        { id: 8,  title: 'Under the Sea',   cols: 3, rows: 3, img: 'under_the_sea.jpg' },
-        { id: 9,  title: 'Pink Flower',     cols: 3, rows: 3, img: 'pink_flower.jpg' },
-        { id: 10, title: 'Purple Plant',    cols: 3, rows: 3, img: 'purple_plant.jpg' },
-        { id: 31, title: 'Yellow Flower',   cols: 3, rows: 3, img: 'yellow_flower.jpg' },
-        { id: 32, title: 'Green Grass',     cols: 3, rows: 3, img: 'grass.jpg' },
-        { id: 33, title: 'Train Journey',   cols: 3, rows: 3, img: 'train.jpg' },
-        { id: 34, title: 'Autumn Vibes',    cols: 3, rows: 3, img: 'Autumn_leaf.jpg' },
-      ],
-    },
-    {
-      slug: 'cities', name: 'Cities', color: '#6366f1', img: 'paris.jpg',
-      levels: [
-        { id: 11, title: 'Paris Eiffel',    cols: 3, rows: 3, img: 'paris.jpg' },
-        { id: 12, title: 'New York',        cols: 3, rows: 3, img: 'newyork.jpg' },
-        { id: 13, title: 'Rome Steps',      cols: 3, rows: 3, img: 'rome.jpg' },
-        { id: 14, title: 'Modern Building', cols: 3, rows: 3, img: 'building_lake.jpg' },
-        { id: 15, title: 'Mosque',          cols: 3, rows: 3, img: 'islamic_mosque.jpg' },
-        { id: 36, title: 'Orange Houses',   cols: 3, rows: 3, img: 'orange_houses.jpg' },
-        { id: 37, title: 'City Elevator',   cols: 3, rows: 3, img: 'elevator.jpg' },
-        { id: 38, title: 'Green Cross',     cols: 3, rows: 3, img: 'pharmacie.jpg' },
-        { id: 39, title: 'Paris Night',     cols: 3, rows: 3, img: 'paris.jpg' },
-      ],
-    },
-    {
-      slug: 'art', name: 'Art', color: '#f97316', img: 'color_tunnel.jpg',
-      levels: [
-        { id: 16, title: 'Color Tunnel',    cols: 3, rows: 3, img: 'color_tunnel.jpg' },
-        { id: 17, title: 'Color Lines',     cols: 3, rows: 3, img: 'color_lines.jpg' },
-        { id: 18, title: 'Abstract Fruits', cols: 3, rows: 3, img: 'abstract_fruits_poster.jpg' },
-        { id: 19, title: 'Ice Cream Art',   cols: 3, rows: 3, img: 'ice_cream_poster.jpg' },
-        { id: 20, title: 'Coloring Tools',  cols: 3, rows: 3, img: 'coloring_tools.jpg' },
-        { id: 41, title: 'Gears',           cols: 3, rows: 3, img: 'gears.jpg' },
-        { id: 42, title: 'Shoe Art',        cols: 3, rows: 3, img: 'shoes.jpg' },
-        { id: 43, title: 'Tunnel Vision',   cols: 3, rows: 3, img: 'color_tunnel.jpg' },
-        { id: 44, title: 'Bright Lines',    cols: 3, rows: 3, img: 'color_lines.jpg' },
-      ],
-    },
-    {
-      slug: 'food', name: 'Food', color: '#eab308', img: 'fruit.jpg',
-      levels: [
-        { id: 21, title: 'Fresh Fruit',     cols: 3, rows: 3, img: 'fruit.jpg' },
-        { id: 22, title: 'Black Berries',   cols: 3, rows: 3, img: 'black_fruit.jpg' },
-        { id: 23, title: 'Pineapple',       cols: 3, rows: 3, img: 'pinaple.jpg' },
-        { id: 24, title: 'Fresh Tomatoes',  cols: 3, rows: 3, img: 'tomatos.jpg' },
-        { id: 25, title: 'Fruit Basket',    cols: 3, rows: 3, img: 'fruit.jpg' },
-        { id: 46, title: 'Berry Mix',       cols: 3, rows: 3, img: 'black_fruit.jpg' },
-        { id: 47, title: 'Tropical',        cols: 3, rows: 3, img: 'pinaple.jpg' },
-        { id: 48, title: 'Red Tomatoes',    cols: 3, rows: 3, img: 'tomatos.jpg' },
-        { id: 49, title: 'Healthy Choice',  cols: 3, rows: 3, img: 'fruit.jpg' },
-      ],
-    },
-  ];
+  let CATEGORIES = [];
+
+  async function loadCategories() {
+    try {
+      const btnPlay = document.getElementById('btn-play');
+      if (btnPlay) {
+        btnPlay.innerText = 'Loading...';
+        btnPlay.style.pointerEvents = 'none';
+        btnPlay.style.opacity = '0.7';
+      }
+      
+      const res = await fetch('/api/categories');
+      const data = await res.json();
+      
+      CATEGORIES = data.map(cat => ({
+        slug: cat.slug,
+        name: cat.name,
+        color: cat.color,
+        img: cat.levels.length > 0 ? cat.levels[0].imageKeyword : '',
+        levels: cat.levels.map(l => ({
+          id: l.id,
+          title: l.title,
+          cols: l.gridCols,
+          rows: l.gridRows,
+          img: l.imageKeyword
+        }))
+      }));
+      
+      if (btnPlay) {
+        btnPlay.innerText = 'Play';
+        btnPlay.style.pointerEvents = 'auto';
+        btnPlay.style.opacity = '1';
+      }
+    } catch (e) {
+      console.error('Failed to load dynamic levels:', e);
+    }
+  }
+  loadCategories();
 
   // ==========================================
   // PROGRESS (localStorage)
@@ -356,11 +321,10 @@
   const collectionGrid   = document.getElementById('collection-grid');
   const puzzleGrid       = document.getElementById('puzzle-grid');
   const gameCanvas       = document.getElementById('game-canvas');
-  const winPreviewCanvas = document.getElementById('win-preview-canvas');
+  const winPreviewImage  = document.getElementById('win-preview-image');
   const timerValueEl     = document.getElementById('timer-value');
 
   const ctx  = gameCanvas.getContext('2d');
-  const wpctx = winPreviewCanvas.getContext('2d');
 
   const confetti = new ConfettiSystem(document.getElementById('confetti-canvas'));
 
@@ -854,39 +818,9 @@
       finalSeconds < 60 ? `${finalSeconds} SECONDS` : `${Math.floor(finalSeconds / 60)}M ${finalSeconds % 60}S`;
     document.getElementById('win-moves-label').textContent = `${finalMoves} MOVES`;
 
-    // Draw solved image exactly as it appears in the game board without squishing
-    const wp = document.querySelector('.win-image-area');
-    const wW = wp.clientWidth - 32;
-    const wH = wp.clientHeight - 16;
-    
-    // Scale board bounding rect to fit container
-    const boardRatio = gameCanvas.width / gameCanvas.height;
-    let drawW = wW;
-    let drawH = wW / boardRatio;
-    if (drawH > wH) {
-      drawH = wH;
-      drawW = wH * boardRatio;
-    }
-    
-    winPreviewCanvas.width = gameCanvas.width;
-    winPreviewCanvas.height = gameCanvas.height;
-    winPreviewCanvas.style.width = `${Math.floor(drawW)}px`;
-    winPreviewCanvas.style.height = `${Math.floor(drawH)}px`;
-    winPreviewCanvas.style.borderRadius = '12px';
-    winPreviewCanvas.style.border = '3px solid var(--gray-900)';
-    winPreviewCanvas.style.boxShadow = '0 4px 0 var(--gray-900)';
-    
-    // Paste all correct tiles sequentially to recreate the perfectly scaled image
-    wpctx.fillStyle = '#f2f2f2';
-    wpctx.fillRect(0, 0, winPreviewCanvas.width, winPreviewCanvas.height);
-    if (splitResult && splitResult.tiles) {
-      splitResult.tiles.forEach((desc, i) => {
-         const col = i % cols;
-         const row = Math.floor(i / cols);
-         const destX = col * splitResult.tileW;
-         const destY = row * splitResult.tileH;
-         wpctx.drawImage(sourceImage, desc.srcX, desc.srcY, desc.srcW, desc.srcH, destX, destY, splitResult.tileW, splitResult.tileH);
-      });
+    // Set the image src to the raw source map natively
+    if (sourceImage) {
+      winPreviewImage.src = sourceImage.src;
     }
 
     // Next level wiring
