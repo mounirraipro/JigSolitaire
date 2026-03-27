@@ -54,30 +54,26 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
   return (
     <div
       ref={containerRef}
-      className={className}
       style={{
         ...style,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        background: isFullscreen ? '#0f172a' : 'var(--bg-card, #fff)',
-        width: isFullscreen ? '100vw' : undefined,
-        height: isFullscreen ? '100vh' : undefined,
-        maxWidth: isFullscreen ? 'none' : undefined,
-        maxHeight: isFullscreen ? 'none' : undefined,
-        border: isFullscreen ? 'none' : undefined,
-        borderRadius: isFullscreen ? '0' : undefined,
-        margin: isFullscreen ? '0' : undefined,
+        background: isFullscreen ? '#0f172a' : 'transparent',
+        width: isFullscreen ? '100vw' : '100%',
+        height: isFullscreen ? '100vh' : 'auto',
       }}
     >
       <iframe
         src={src}
         title={title}
+        className={!isFullscreen ? className : undefined}
         style={{
           width: '100%',
           flexGrow: 1,
           border: 'none',
           backgroundColor: 'transparent',
+          ...(isFullscreen && { height: '100%' })
         }}
         allow="autoplay; fullscreen"
         loading="lazy"
@@ -94,7 +90,7 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
           justifyContent: 'center',
           width: '100%',
           backgroundColor: isFullscreen ? '#0f172a' : 'transparent',
-          borderTop: isFullscreen ? '1px solid rgba(255,255,255,0.1)' : '1px solid var(--border-light, #f5f0eb)',
+          borderTop: isFullscreen ? '1px solid rgba(255,255,255,0.1)' : 'none',
         }}
       >
         <button 

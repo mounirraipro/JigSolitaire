@@ -572,8 +572,8 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   margin: 0 auto;
 
   /* Desktop (Landscape) */
-  max-width: 900px;
-  height: 70vh;
+  max-width: 1200px;
+  height: 80vh;
   min-height: 550px;
   max-height: 750px;
 }
