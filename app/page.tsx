@@ -216,8 +216,9 @@ export default function Home() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(5, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
             gap: '1rem',
+            width: '100%',
             maxWidth: '700px',
             margin: '0 auto',
           }}>
@@ -231,6 +232,7 @@ export default function Home() {
               <div key={cat.name} style={{
                 textAlign: 'center',
                 padding: '1.75rem 0.75rem',
+                minWidth: 0,
                 background: 'var(--bg-card)',
                 borderRadius: 'var(--radius-lg)',
                 border: '1px solid var(--border-light)',

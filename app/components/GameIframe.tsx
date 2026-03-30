@@ -13,25 +13,93 @@ interface GameIframeProps {
 export default function GameIframe({ src, title, className, style, scrolling }: GameIframeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isIosFallbackFullscreen, setIsIosFallbackFullscreen] = useState(false);
 
   useEffect(() => {
     const onFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+      const webkitDocument = document as Document & {
+        webkitFullscreenElement?: Element | null;
+      };
+
+      setIsFullscreen(
+        !!document.fullscreenElement || !!webkitDocument.webkitFullscreenElement,
+      );
     };
+
     document.addEventListener('fullscreenchange', onFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', onFullscreenChange as EventListener);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', onFullscreenChange as EventListener);
+    };
   }, []);
 
-  const handleFullscreen = () => {
-    if (containerRef.current) {
-      if (!document.fullscreenElement) {
-        containerRef.current.requestFullscreen().catch(err => {
-          console.error(`Error attempting to enable fullscreen: ${err.message}`);
-        });
-      } else {
-        document.exitFullscreen();
-      }
+  useEffect(() => {
+    if (!isIosFallbackFullscreen) {
+      return;
     }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isIosFallbackFullscreen]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsIosFallbackFullscreen(false);
+      }
+    };
+
+    if (isIosFallbackFullscreen) {
+      window.addEventListener('keydown', onKeyDown);
+    }
+
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isIosFallbackFullscreen]);
+
+  const handleFullscreen = () => {
+    const container = containerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const webkitElement = container as HTMLDivElement & {
+      webkitRequestFullscreen?: () => Promise<void> | void;
+    };
+    const webkitDocument = document as Document & {
+      webkitFullscreenElement?: Element | null;
+      webkitExitFullscreen?: () => Promise<void> | void;
+    };
+
+    if (isIosFallbackFullscreen) {
+      setIsIosFallbackFullscreen(false);
+      return;
+    }
+
+    if (document.fullscreenElement || webkitDocument.webkitFullscreenElement) {
+      const exitFullscreen = document.exitFullscreen?.bind(document) || webkitDocument.webkitExitFullscreen?.bind(document);
+
+      exitFullscreen?.();
+      return;
+    }
+
+    const requestFullscreen = container.requestFullscreen?.bind(container) || webkitElement.webkitRequestFullscreen?.bind(container);
+
+    if (requestFullscreen) {
+      Promise.resolve(requestFullscreen()).catch((err: { message?: string }) => {
+        console.error(`Error attempting to enable fullscreen: ${err.message ?? 'Unknown error'}`);
+        setIsIosFallbackFullscreen(true);
+      });
+      return;
+    }
+
+    setIsIosFallbackFullscreen(true);
   };
 
   const handleShare = async () => {
@@ -59,9 +127,14 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        background: isFullscreen ? '#0f172a' : 'transparent',
-        width: isFullscreen ? '100vw' : '100%',
-        height: isFullscreen ? '100vh' : 'auto',
+        background: isFullscreen || isIosFallbackFullscreen ? '#0f172a' : 'transparent',
+        width: isFullscreen ? '100vw' : isIosFallbackFullscreen ? '100%' : '100%',
+        height: isFullscreen ? '100vh' : isIosFallbackFullscreen ? '100dvh' : 'auto',
+        position: isIosFallbackFullscreen ? 'fixed' : 'relative',
+        inset: isIosFallbackFullscreen ? 0 : 'auto',
+        zIndex: isIosFallbackFullscreen ? 9999 : 'auto',
+        paddingTop: isIosFallbackFullscreen ? 'max(env(safe-area-inset-top), 0px)' : 0,
+        paddingBottom: isIosFallbackFullscreen ? 'max(env(safe-area-inset-bottom), 0px)' : 0,
       }}
     >
       <iframe
@@ -73,9 +146,10 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
           flexGrow: 1,
           border: 'none',
           backgroundColor: 'transparent',
-          ...(isFullscreen && { height: '100%' })
+          ...(isFullscreen || isIosFallbackFullscreen ? { height: '100%' } : {}),
         }}
         allow="autoplay; fullscreen"
+        allowFullScreen
         loading="lazy"
         scrolling={scrolling}
       />
@@ -89,8 +163,9 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
           padding: '12px',
           justifyContent: 'center',
           width: '100%',
-          backgroundColor: isFullscreen ? '#0f172a' : 'transparent',
-          borderTop: isFullscreen ? '1px solid rgba(255,255,255,0.1)' : 'none',
+          backgroundColor: isFullscreen || isIosFallbackFullscreen ? '#0f172a' : 'transparent',
+          borderTop: isFullscreen || isIosFallbackFullscreen ? '1px solid rgba(255,255,255,0.1)' : 'none',
+          flexWrap: 'wrap',
         }}
       >
         <button 
@@ -115,6 +190,11 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
           onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.06)'; }}
         >
           {isFullscreen ? (
+            <>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
+              Exit Fullscreen
+            </>
+          ) : isIosFallbackFullscreen ? (
             <>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>
               Exit Fullscreen
