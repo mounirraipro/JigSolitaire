@@ -280,12 +280,14 @@
         name: cat.name,
         color: cat.color,
         img: cat.levels.length > 0 ? cat.levels[0].imageKeyword : '',
+        thumb: cat.levels.length > 0 ? cat.levels[0].imageThumbnail : '',
         levels: cat.levels.map(l => ({
           id: l.id,
           title: l.title,
           cols: l.gridCols,
           rows: l.gridRows,
-          img: l.imageKeyword
+          img: l.imageKeyword,
+          thumb: l.imageThumbnail
         }))
       }));
       
@@ -310,19 +312,28 @@
     catch { return {}; }
   }
 
+  function getProgressKey(progress) {
+    return Object.keys(progress)
+      .filter((levelId) => progress[levelId])
+      .sort((a, b) => Number(a) - Number(b))
+      .join(',');
+  }
+
   function markSolved(levelId) {
     const p = getProgress();
     p[levelId] = true;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+    collectionRenderKey = '';
+    puzzleRenderKey = '';
   }
 
-  function isLevelUnlocked(cat, levelIndex) {
+  function isLevelUnlocked(cat, levelIndex, progress = getProgress()) {
     if (levelIndex === 0) return true;
-    return !!getProgress()[cat.levels[levelIndex - 1].id];
+    return !!progress[cat.levels[levelIndex - 1].id];
   }
 
-  function isLevelSolved(levelId) {
-    return !!getProgress()[levelId];
+  function isLevelSolved(levelId, progress = getProgress()) {
+    return !!progress[levelId];
   }
 
   // ==========================================
@@ -346,6 +357,8 @@
   let isAnimating = false;
   let prevMergedCount = 0;
   let moveHistory = [];      // arrays of currentIndex snapshots for UNDO
+  let collectionRenderKey = '';
+  let puzzleRenderKey = '';
 
   // ==========================================
   // DOM
@@ -475,6 +488,58 @@
     return `/levels/${cat.name}/${imgFile}`;
   }
 
+  function thumbUrl(cat, imgFile) {
+    return `/level-thumbs/${cat.name}/${imgFile}`;
+  }
+
+  const lazyImageObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const img = entry.target;
+          const src = img.dataset.src;
+          if (src && img.src !== src) {
+            img.src = src;
+          }
+          observer.unobserve(img);
+        });
+      }, {
+        rootMargin: '200px 0px',
+      })
+    : null;
+
+  function createCardImage(src, alt) {
+    const img = document.createElement('img');
+    img.alt = alt;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.fetchPriority = 'low';
+
+    if (lazyImageObserver) {
+      img.dataset.src = src;
+      lazyImageObserver.observe(img);
+    } else {
+      img.src = src;
+    }
+
+    return img;
+  }
+
+  function getVisibleLevelEntries(cat, progress) {
+    let teaserAdded = false;
+
+    return cat.levels.map((level, index) => {
+      const unlocked = isLevelUnlocked(cat, index, progress);
+      const isTeaser = !unlocked && !teaserAdded;
+
+      if (isTeaser) {
+        teaserAdded = true;
+      }
+
+      return { level, index, unlocked, isTeaser };
+    });
+  }
+
   function loadImage(cat, imgFile) {
     return new Promise((resolve) => {
       const img = new Image();
@@ -511,14 +576,18 @@
   // COLLECTION SCREEN
   // ==========================================
   function initCollectionScreen() {
+    const progressKey = getProgressKey(getProgress());
+    const nextRenderKey = `${CATEGORIES.length}:${progressKey}`;
+    if (collectionRenderKey === nextRenderKey) return;
+
     collectionGrid.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+
     CATEGORIES.forEach((cat) => {
       const card = document.createElement('div');
       card.className = 'grid-card';
-      const img = document.createElement('img');
-      img.src = imgUrl(cat, cat.img);
-      img.alt = cat.name;
-      img.loading = 'lazy';
+      const imgSrc = cat.thumb ? thumbUrl(cat, cat.thumb) : imgUrl(cat, cat.img);
+      const img = createCardImage(imgSrc, cat.name);
       card.appendChild(img);
       card.addEventListener('click', () => {
         sfx.click();
@@ -526,8 +595,11 @@
         initPuzzleScreen(cat);
         showScreen(puzzleScreen);
       });
-      collectionGrid.appendChild(card);
+      fragment.appendChild(card);
     });
+
+    collectionGrid.appendChild(fragment);
+    collectionRenderKey = nextRenderKey;
   }
 
   document.getElementById('btn-quick-play-collection').addEventListener('click', () => {
@@ -539,17 +611,26 @@
   // PUZZLE SCREEN
   // ==========================================
   function initPuzzleScreen(cat) {
+    const progress = getProgress();
+    const nextRenderKey = `${cat.slug}:${getProgressKey(progress)}`;
+    if (puzzleRenderKey === nextRenderKey) return;
+
     puzzleGrid.innerHTML = '';
-    cat.levels.forEach((level, i) => {
-      const unlocked = isLevelUnlocked(cat, i);
+    const fragment = document.createDocumentFragment();
+
+    getVisibleLevelEntries(cat, progress).forEach(({ level, index, unlocked, isTeaser }) => {
       const card = document.createElement('div');
       card.className = 'grid-card' + (unlocked ? '' : ' is-locked');
 
-      const img = document.createElement('img');
-      img.src = imgUrl(cat, level.img);
-      img.alt = level.title;
-      img.loading = 'lazy';
-      card.appendChild(img);
+      if (unlocked) {
+        const imgSrc = level.thumb ? thumbUrl(cat, level.thumb) : imgUrl(cat, level.img);
+        const img = createCardImage(imgSrc, level.title);
+        card.appendChild(img);
+      } else {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'grid-card-placeholder';
+        card.appendChild(placeholder);
+      }
 
       if (!unlocked) {
         const overlay = document.createElement('div');
@@ -559,18 +640,21 @@
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
           </svg>
-          <span style="color: var(--white); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Locked</span>
+          <span style="color: var(--white); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">${isTeaser ? 'Next Puzzle' : 'Locked'}</span>
         `;
         card.appendChild(overlay);
       } else {
         card.addEventListener('click', () => {
           sfx.click();
-          currentLevelIndex = i;
+          currentLevelIndex = index;
           startGame(cat, level);
         });
       }
-      puzzleGrid.appendChild(card);
+      fragment.appendChild(card);
     });
+
+    puzzleGrid.appendChild(fragment);
+    puzzleRenderKey = nextRenderKey;
   }
 
   document.getElementById('btn-quick-play-puzzle').addEventListener('click', () => {
@@ -587,9 +671,11 @@
   // QUICK PLAY — pick first unlocked level from any category
   // ==========================================
   function quickPlay() {
+    const progress = getProgress();
+
     for (const cat of CATEGORIES) {
       for (let i = 0; i < cat.levels.length; i++) {
-        if (isLevelUnlocked(cat, i) && !isLevelSolved(cat.levels[i].id)) {
+        if (isLevelUnlocked(cat, i, progress) && !isLevelSolved(cat.levels[i].id, progress)) {
           currentCategory = cat;
           currentLevelIndex = i;
           startGame(cat, cat.levels[i]);
@@ -942,7 +1028,8 @@
     // Next level wiring
     const nextIndex = currentLevelIndex + 1;
     const btnContinue = document.getElementById('btn-continue');
-    if (nextIndex < currentCategory.levels.length && isLevelUnlocked(currentCategory, nextIndex)) {
+    const progress = getProgress();
+    if (nextIndex < currentCategory.levels.length && isLevelUnlocked(currentCategory, nextIndex, progress)) {
       btnContinue.style.display = '';
       btnContinue.onclick = () => {
         sfx.click();

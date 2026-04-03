@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:level-thumbs": "python scripts/generate_level_thumbnails.py"
   },
   "dependencies": {
     "gsap": "^3.14.2",

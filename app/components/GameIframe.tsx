@@ -12,8 +12,22 @@ interface GameIframeProps {
 
 export default function GameIframe({ src, title, className, style, scrolling }: GameIframeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isIosFallbackFullscreen, setIsIosFallbackFullscreen] = useState(false);
+
+  const isIPhoneSafari = (() => {
+    if (typeof navigator === 'undefined') {
+      return false;
+    }
+
+    const ua = navigator.userAgent;
+    const isIPhone = /iPhone|iPod/i.test(ua);
+    const isWebKit = /WebKit/i.test(ua);
+    const isOtherBrowserShell = /CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua);
+
+    return isIPhone && isWebKit && !isOtherBrowserShell;
+  })();
 
   useEffect(() => {
     const onFullscreenChange = () => {
@@ -62,44 +76,71 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [isIosFallbackFullscreen]);
 
-  const handleFullscreen = () => {
+  const handleFullscreen = async () => {
     const container = containerRef.current;
+    const iframe = iframeRef.current;
 
-    if (!container) {
+    if (!container || !iframe) {
       return;
     }
 
-    const webkitElement = container as HTMLDivElement & {
-      webkitRequestFullscreen?: () => Promise<void> | void;
-    };
-    const webkitDocument = document as Document & {
+    const fullscreenDocument = document as Document & {
       webkitFullscreenElement?: Element | null;
       webkitExitFullscreen?: () => Promise<void> | void;
+      webkitFullscreenEnabled?: boolean;
     };
+    const fullscreenIframe = iframe as HTMLIFrameElement & {
+      webkitRequestFullscreen?: () => Promise<void> | void;
+    };
+    const fullscreenContainer = container as HTMLDivElement & {
+      webkitRequestFullscreen?: () => Promise<void> | void;
+    };
+
+    const hasNativeSupport = Boolean(
+      document.fullscreenEnabled || fullscreenDocument.webkitFullscreenEnabled,
+    );
+    const fullscreenElement =
+      document.fullscreenElement || fullscreenDocument.webkitFullscreenElement;
 
     if (isIosFallbackFullscreen) {
       setIsIosFallbackFullscreen(false);
       return;
     }
 
-    if (document.fullscreenElement || webkitDocument.webkitFullscreenElement) {
-      const exitFullscreen = document.exitFullscreen?.bind(document) || webkitDocument.webkitExitFullscreen?.bind(document);
+    if (fullscreenElement) {
+      const exitFullscreen =
+        document.exitFullscreen?.bind(document) || fullscreenDocument.webkitExitFullscreen?.bind(document);
 
-      exitFullscreen?.();
+      try {
+        await Promise.resolve(exitFullscreen?.());
+      } catch (err) {
+        console.error('Error attempting to exit fullscreen:', err);
+      }
       return;
     }
 
-    const requestFullscreen = container.requestFullscreen?.bind(container) || webkitElement.webkitRequestFullscreen?.bind(container);
-
-    if (requestFullscreen) {
-      Promise.resolve(requestFullscreen()).catch((err: { message?: string }) => {
-        console.error(`Error attempting to enable fullscreen: ${err.message ?? 'Unknown error'}`);
-        setIsIosFallbackFullscreen(true);
-      });
+    if (isIPhoneSafari) {
+      setIsIosFallbackFullscreen(true);
       return;
     }
 
-    setIsIosFallbackFullscreen(true);
+    const requestFullscreen =
+      iframe.requestFullscreen?.bind(iframe) ||
+      fullscreenIframe.webkitRequestFullscreen?.bind(iframe) ||
+      container.requestFullscreen?.bind(container) ||
+      fullscreenContainer.webkitRequestFullscreen?.bind(container);
+
+    if (!hasNativeSupport || !requestFullscreen) {
+      setIsIosFallbackFullscreen(true);
+      return;
+    }
+
+    try {
+      await Promise.resolve(requestFullscreen());
+    } catch (err) {
+      console.error('Error attempting to enable fullscreen:', err);
+      setIsIosFallbackFullscreen(true);
+    }
   };
 
   const handleShare = async () => {
@@ -138,6 +179,7 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
       }}
     >
       <iframe
+        ref={iframeRef}
         src={src}
         title={title}
         className={!isFullscreen ? className : undefined}
@@ -148,7 +190,7 @@ export default function GameIframe({ src, title, className, style, scrolling }: 
           backgroundColor: 'transparent',
           ...(isFullscreen || isIosFallbackFullscreen ? { height: '100%' } : {}),
         }}
-        allow="autoplay; fullscreen"
+        allow="autoplay; fullscreen *"
         allowFullScreen
         loading="lazy"
         scrolling={scrolling}

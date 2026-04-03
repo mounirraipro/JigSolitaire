@@ -9,6 +9,7 @@ export interface GameLevel {
   gridRows: number;
   difficulty: 'Easy' | 'Medium' | 'Hard' | 'Expert' | 'Master';
   imageKeyword: string;
+  imageThumbnail: string;
 }
 
 export interface GameCategory {
@@ -65,7 +66,8 @@ try {
         gridCols: 3,
         gridRows: 3,
         difficulty,
-        imageKeyword: file
+        imageKeyword: file,
+        imageThumbnail: `${path.parse(file).name}.webp`
       });
     });
 
