@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'The Best Puzzle Routine for Busy Adults: A Realistic Weekly Plan',
@@ -237,6 +240,15 @@ export default function BusyAdultsPuzzleRoutinePage() {
                     { id: 4, text: 'Lally, P., van Jaarsveld, C. H. M., Potts, H. W. W., Wardle, J. (2010). How are habits formed? European Journal of Social Psychology, 40(6), 998-1009.', url: 'https://doi.org/10.1002/ejsp.674' },
                     { id: 5, text: 'Baumeister, R. F., Tierney, J. (2011). Willpower: Rediscovering the Greatest Human Strength. Penguin Press.' },
                 ]} />
+
+                <ArticleTags
+                    category="Strategy"
+                    tags={['puzzle routine', 'time management', 'busy adults', 'daily habits', 'productivity']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'puzzles-and-focus', title: 'How Puzzles Improve Focus and Attention in the Digital Age', excerpt: 'Why regular puzzle play can retrain attention in a distracted environment.', category: 'Science', readTime: '9 min read' },

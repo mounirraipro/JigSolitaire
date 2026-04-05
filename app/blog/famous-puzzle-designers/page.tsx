@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Famous Puzzle Designers Who Changed Gaming Forever',
@@ -223,6 +226,15 @@ export default function FamousPuzzleDesignersPage() {
                     { id: 5, text: 'Shortz, W. (2001). Puzzlemaster Presents: 200 Mind-Bending Challenges. Random House.' },
                     { id: 6, text: 'Pegg, E. (2005). The history of Sudoku. Math Games Archive, MAA.' },
                 ]} />
+
+                <ArticleTags
+                    category="History"
+                    tags={['puzzle designers', "Rubik's cube", 'Tetris', 'game design', 'puzzle history']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'history-of-puzzle-games', title: 'The Fascinating History of Jigsaw & Solitaire Games', excerpt: 'From 18th-century dissected maps to modern digital puzzles.', category: 'History', readTime: '8 min read' },

@@ -3,9 +3,10 @@
 interface AuthorBylineProps {
     date: string;
     readTime: string;
+    author?: string;
 }
 
-export default function AuthorByline({ date, readTime }: AuthorBylineProps) {
+export default function AuthorByline({ date, readTime, author = 'Lahcen Aharouane' }: AuthorBylineProps) {
     return (
         <div style={{
             fontSize: '0.8rem',
@@ -17,7 +18,7 @@ export default function AuthorByline({ date, readTime }: AuthorBylineProps) {
             flexWrap: 'wrap',
         }}>
             <span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>
-                JigSolitaire Editorial Team
+                {author}
             </span>
             <span style={{ opacity: 0.4 }}>·</span>
             <span>{date}</span>

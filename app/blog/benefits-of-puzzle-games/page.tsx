@@ -2,8 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
+import AuthorBioBox from '../../components/AuthorBioBox';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
+import FAQ from '../../components/FAQ';
 
 export const metadata: Metadata = {
     title: '7 Brain Benefits of Playing Puzzle Games',
@@ -121,12 +125,45 @@ export default function BenefitsPage() {
                     your neurons will thank you.
                 </p>
 
+                <h2>Frequently Asked Questions</h2>
+                <FAQ items={[
+                    {
+                        question: 'How long do you need to play puzzles to see cognitive benefits?',
+                        answer: 'Research suggests that even 10–15 minutes of focused puzzle activity per day can produce measurable improvements in working memory and processing speed over several weeks. Consistency matters more than session length.',
+                    },
+                    {
+                        question: 'Are digital puzzles as beneficial as physical jigsaw puzzles?',
+                        answer: 'Studies comparing digital and physical puzzle formats have found broadly similar cognitive benefits. The key variables are engagement and challenge level, not the medium. Digital puzzles add the convenience of always having an appropriate difficulty level available.',
+                    },
+                    {
+                        question: 'Do puzzles actually help prevent dementia?',
+                        answer: 'Puzzles contribute to what researchers call "cognitive reserve" — the brain\'s resilience against damage. While no activity can prevent dementia outright, regular mentally stimulating activities including puzzles are consistently associated with later onset and slower progression of cognitive decline in longitudinal studies.',
+                    },
+                    {
+                        question: 'What type of puzzle is best for the brain?',
+                        answer: 'Different puzzle types exercise different cognitive systems. Spatial puzzles (jigsaw, tile-swap) strengthen visual-spatial reasoning. Verbal puzzles (crosswords) strengthen vocabulary and verbal fluency. Logical puzzles (Sudoku) strengthen pattern recognition and working memory. For broad cognitive benefit, variety is ideal.',
+                    },
+                    {
+                        question: 'Can puzzle games reduce anxiety?',
+                        answer: 'Yes. The focused attention required by puzzles induces a flow state that naturally suppresses anxiety-generating thought patterns. Multiple studies have measured cortisol reductions following puzzle engagement, though the effect is temporary rather than therapeutic in a clinical sense.',
+                    },
+                ]} />
+
                 <Sources sources={[
                     { id: 1, text: 'Levine, S. C., et al. (2012). Early puzzle play: A predictor of preschoolers\' spatial transformation skill. Developmental Psychology, 48(2), 530–542.', url: 'https://doi.org/10.1037/a0025913' },
                     { id: 2, text: 'Brooker, H., et al. (2019). The relationship between puzzle use and cognitive function. International Journal of Geriatric Psychiatry, 34(7), 1024–1031.', url: 'https://doi.org/10.1002/gps.5113' },
                     { id: 3, text: 'Rebok, G. W., et al. (2014). Ten-year effects of the ACTIVE cognitive training trial on cognition and everyday functioning in older adults. JAGS, 62(1), 16–24.', url: 'https://doi.org/10.1111/jgs.12607' },
                     { id: 4, text: 'Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['cognitive benefits', 'brain health', 'memory', 'stress relief', 'puzzle science']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'neuroscience-of-puzzle-solving', title: 'The Neuroscience of Puzzle Solving: What Happens in Your Brain', excerpt: 'Dopamine, neural plasticity, and the brain regions activated by puzzles.', category: 'Science', readTime: '10 min read' },

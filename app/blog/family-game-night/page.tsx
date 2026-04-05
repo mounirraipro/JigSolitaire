@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Family Game Night: Building Bonds Through Puzzles',
@@ -190,6 +193,15 @@ export default function FamilyGameNightPage() {
                     { id: 4, text: 'Whitebread, D. (2012). The importance of play. Toy Industries of Europe report. University of Cambridge.' },
                     { id: 5, text: 'Yogman, M., et al. (2018). The power of play: A pediatric role in enhancing development in young children. Pediatrics, 142(3), e20182058.', url: 'https://doi.org/10.1542/peds.2018-2058' },
                 ]} />
+
+                <ArticleTags
+                    category="Family"
+                    tags={['family activities', 'game night', 'bonding', 'puzzle together', 'multiplayer']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'best-puzzle-games-for-kids', title: 'Best Puzzle Games for Kids in 2025', excerpt: 'Curated list of safe, educational, and fun puzzle games for children.', category: 'Family', readTime: '6 min read' },

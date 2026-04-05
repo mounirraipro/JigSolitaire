@@ -2,8 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
+import AuthorBioBox from '../../components/AuthorBioBox';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
+import FAQ from '../../components/FAQ';
 
 export const metadata: Metadata = {
     title: 'Best Puzzle Games for Kids in 2025',
@@ -121,11 +125,44 @@ export default function BestForKidsPage() {
                     <Link href="/blog/screen-time-guide">Parent&apos;s Guide to Screen Time</Link>.
                 </p>
 
+                <h2>Frequently Asked Questions</h2>
+                <FAQ items={[
+                    {
+                        question: 'At what age can children start playing puzzle games?',
+                        answer: 'Simple shape-matching puzzles are suitable from around age 2. Digital tile puzzles with a 3×3 grid are generally appropriate from age 5 or 6, when children have the motor control and spatial reasoning to engage with drag-and-drop mechanics. Difficulty should always match the child\'s development stage.',
+                    },
+                    {
+                        question: 'How much screen time is appropriate for children playing puzzle games?',
+                        answer: 'The American Academy of Pediatrics recommends no more than one hour of screen time per day for children aged 2–5, and consistent limits for older children. For puzzle games specifically, 20–30 minute focused sessions tend to be more beneficial than longer, passive sessions.',
+                    },
+                    {
+                        question: 'Are free browser puzzle games safe for children?',
+                        answer: 'It depends on the specific game. Look for games with no social features, no user-generated content, no chat, and transparent privacy policies that comply with COPPA. JigSolitaire, for example, has no social features and does not collect personal data from children.',
+                    },
+                    {
+                        question: 'Do puzzle games help children with ADHD?',
+                        answer: 'Some research suggests that structured, short puzzle sessions can help children with ADHD practise sustained attention in a low-stakes environment. The immediate feedback and clear goal structure of puzzle games align well with the kind of external motivation that helps many children with ADHD engage. However, this should complement, not replace, professional guidance.',
+                    },
+                    {
+                        question: 'What makes a puzzle game "educational"?',
+                        answer: 'According to Hirsh-Pasek et al. (2015), truly educational apps require active rather than passive engagement, connect to curricular concepts, involve social interaction where possible, and avoid distracting bells-and-whistles. A puzzle that makes the child think and make decisions is fundamentally more educational than one that rewards button-mashing.',
+                    },
+                ]} />
+
                 <Sources sources={[
                     { id: 1, text: 'Hirsh-Pasek, K., et al. (2015). Putting education in "educational" apps: Lessons from the science of learning. Psychological Science in the Public Interest, 16(1), 3–34.', url: 'https://doi.org/10.1177/1529100615569721' },
                     { id: 2, text: 'Levine, S. C., et al. (2012). Early puzzle play: A predictor of preschoolers\' spatial transformation skill. Developmental Psychology, 48(2), 530–542.', url: 'https://doi.org/10.1037/a0025913' },
                     { id: 3, text: 'American Academy of Pediatrics. (2016). Media and Young Minds. Pediatrics, 138(5), e20162591.', url: 'https://doi.org/10.1542/peds.2016-2591' },
                 ]} />
+
+                <ArticleTags
+                    category="Family"
+                    tags={['kids puzzle games', 'educational games', 'children screen time', 'safe games for kids', 'COPPA']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'screen-time-guide', title: "A Parent's Complete Guide to Screen Time and Educational Games", excerpt: 'Evidence-based guidance on screen time quality and choosing educational content.', category: 'Family', readTime: '10 min read' },

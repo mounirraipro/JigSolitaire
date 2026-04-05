@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Pattern Recognition: The Hidden Skill Behind Every Great Puzzler',
@@ -201,6 +204,15 @@ export default function PatternRecognitionPage() {
                     { id: 4, text: 'Ericsson, K. A., Krampe, R. T., & Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance. Psychological Review, 100(3), 363–406.' },
                     { id: 5, text: 'Treisman, A. M., & Gelade, G. (1980). A feature-integration theory of attention. Cognitive Psychology, 12(1), 97–136.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['pattern recognition', 'spatial reasoning', 'visual processing', 'cognitive skills', 'perception']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'tips-and-tricks', title: 'Pro Tips & Tricks to Master JigSolitaire', excerpt: 'From corner strategies to chain swaps, expert techniques for puzzle mastery.', category: 'Strategy', readTime: '7 min read' },

@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'How to Get Better at Jigsaw Puzzles: 12 Skills That Actually Help',
@@ -252,6 +255,15 @@ export default function BetterAtJigsawsPage() {
                     { id: 4, text: 'Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.' },
                     { id: 5, text: 'Kornell, N., Bjork, R. A. (2008). Learning concepts and categories: Is spacing the enemy of induction? Psychological Science, 19(6), 585-592.', url: 'https://doi.org/10.1111/j.1467-9280.2008.02127.x' },
                 ]} />
+
+                <ArticleTags
+                    category="Strategy"
+                    tags={['jigsaw tips', 'puzzle strategy', 'sorting technique', 'improve puzzle skills', 'advanced tips']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'tips-and-tricks', title: 'Pro Tips & Tricks to Master JigSolitaire', excerpt: 'Move optimization, setup strategies, and smart habits for faster solves.', category: 'Strategy', readTime: '7 min read' },

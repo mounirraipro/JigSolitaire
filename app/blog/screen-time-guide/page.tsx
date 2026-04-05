@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: "A Parent's Complete Guide to Screen Time and Educational Games",
@@ -193,6 +196,15 @@ export default function ScreenTimeGuidePage() {
                     { id: 4, text: 'Hirsh-Pasek, K., et al. (2015). Putting education in "educational" apps: Lessons from the science of learning. Psychological Science in the Public Interest, 16(1), 3–34.', url: 'https://doi.org/10.1177/1529100615569721' },
                     { id: 5, text: 'Kuhl, P. K. (2011). Early language learning and literacy: Neuroscience implications for education. Mind, Brain, and Education, 5(3), 128–142.' },
                 ]} />
+
+                <ArticleTags
+                    category="Family"
+                    tags={['screen time', 'parents', 'digital health', 'children', 'educational games']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'best-puzzle-games-for-kids', title: 'Best Puzzle Games for Kids in 2025', excerpt: 'Our curated list of educational, safe, and fun puzzle games for children.', category: 'Family', readTime: '6 min read' },

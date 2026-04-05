@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Mindfulness and Puzzles: How Games Create Flow States',
@@ -225,6 +228,15 @@ export default function MindfulnessPage() {
                     { id: 4, text: 'Raichle, M. E. (2015). The brain\'s default mode network. Annual Review of Neuroscience, 38, 433–447.', url: 'https://doi.org/10.1146/annurev-neuro-071013-014030' },
                     { id: 5, text: 'Fong, C. J., Zaleski, D. J., & Leach, J. K. (2018). The challenge–skill balance and antecedents of flow: A meta-analytic investigation. The Journal of Positive Psychology, 10(5), 425–446.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['mindfulness', 'meditation', 'stress reduction', 'present moment', 'calm']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'neuroscience-of-puzzle-solving', title: 'The Neuroscience of Puzzle Solving: What Happens in Your Brain', excerpt: 'The brain science behind dopamine release, neural plasticity, and puzzle engagement.', category: 'Science', readTime: '10 min read' },

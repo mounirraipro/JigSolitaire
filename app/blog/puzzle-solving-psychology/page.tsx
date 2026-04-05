@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: "Puzzle-Solving Psychology: Why We Love the 'Aha!' Moment",
@@ -245,6 +248,15 @@ export default function PuzzleSolvingPsychologyPage() {
                     { id: 7, text: 'Bjork, R. A. (1994). Memory and meta-memory considerations in the training of human beings. In J. Metcalfe & A. P. Shimamura (Eds.), Metacognition. MIT Press.' },
                     { id: 8, text: 'Ramachandran, V. S., & Hirstein, W. (1999). The science of art: A neurological theory of aesthetic experience. Journal of Consciousness Studies, 6(6-7), 15–51.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['psychology', 'flow state', 'problem solving', 'cognitive science', 'motivation']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'neuroscience-of-puzzle-solving', title: 'The Neuroscience of Puzzle Solving: What Happens in Your Brain', excerpt: 'From dopamine to neural plasticity — the neuroscience behind every puzzle move.', category: 'Science', readTime: '10 min read' },

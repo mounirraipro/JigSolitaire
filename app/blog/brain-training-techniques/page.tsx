@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Brain Training Techniques: Science-Based Methods That Actually Work',
@@ -214,6 +217,15 @@ export default function BrainTrainingPage() {
                     { id: 5, text: 'Sedlmeier, P., et al. (2012). The psychological effects of meditation: A meta-analysis. Psychological Bulletin, 138(6), 1139–1171.', url: 'https://doi.org/10.1037/a0028168' },
                     { id: 6, text: 'Ybarra, O., et al. (2008). Mental exercising through simple socializing: Social interaction promotes general cognitive functioning. Personality and Social Psychology Bulletin, 34(2), 248–259.' },
                 ]} />
+
+                <ArticleTags
+                    category="Strategy"
+                    tags={['brain training', 'cognitive exercises', 'mental fitness', 'neuroplasticity', 'focus']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'benefits-of-puzzle-games', title: '7 Brain Benefits of Playing Puzzle Games', excerpt: 'Seven science-backed benefits of making puzzles part of your routine.', category: 'Science', readTime: '6 min read' },

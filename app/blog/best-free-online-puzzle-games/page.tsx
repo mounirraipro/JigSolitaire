@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: '10 Best Free Online Puzzle Games in 2026 (Honest Reviews)',
@@ -260,6 +263,15 @@ export default function BestFreePuzzleGamesPage() {
                     { id: 2, text: 'Ratings are based on the editorial team\'s independent assessment. No game listed has paid for placement or review.' },
                     { id: 3, text: 'Brooker, H., et al. (2019). The relationship between puzzle use and cognitive function. International Journal of Geriatric Psychiatry, 34(7), 1024–1031.' },
                 ]} />
+
+                <ArticleTags
+                    category="Reviews"
+                    tags={['free puzzle games', 'online games', 'browser games', 'top puzzle games', 'recommendations']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'brain-training-techniques', title: 'Brain Training Techniques: Science-Based Methods That Actually Work', excerpt: 'Which cognitive training approaches are backed by evidence?', category: 'Strategy', readTime: '10 min read' },

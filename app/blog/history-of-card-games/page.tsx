@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'The Complete History of Card Games: From Ancient China to Solitaire',
@@ -200,6 +203,15 @@ export default function HistoryOfCardGamesPage() {
                     { id: 5, text: 'Parlett, D. (1979). The Penguin Book of Patience. Penguin Books.' },
                     { id: 6, text: 'Microsoft. (2020). Celebrating 30 Years of Microsoft Solitaire. Microsoft News Center.' },
                 ]} />
+
+                <ArticleTags
+                    category="History"
+                    tags={['card game history', 'solitaire history', 'playing cards', 'patience game', 'card origins']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'history-of-puzzle-games', title: 'The Fascinating History of Jigsaw & Solitaire Games', excerpt: 'From 18th-century dissected maps to modern digital puzzles.', category: 'History', readTime: '8 min read' },

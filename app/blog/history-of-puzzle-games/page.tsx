@@ -2,8 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
+import AuthorBioBox from '../../components/AuthorBioBox';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
+import FAQ from '../../components/FAQ';
 
 export const metadata: Metadata = {
     title: 'The Fascinating History of Jigsaw & Solitaire Games',
@@ -126,12 +130,45 @@ export default function HistoryPage() {
                     today&apos;s digital grids, the core appeal remains unchanged.
                 </p>
 
+                <h2>Frequently Asked Questions</h2>
+                <FAQ items={[
+                    {
+                        question: 'Who invented the jigsaw puzzle?',
+                        answer: 'The jigsaw puzzle is credited to John Spilsbury, a London cartographer and engraver who around 1760 mounted a world map on hardwood and cut along country borders to create an educational tool he called "dissected maps."',
+                    },
+                    {
+                        question: 'When was solitaire first played?',
+                        answer: 'Solitaire (also called Patience) is believed to have originated in Northern Europe in the mid-18th century. The earliest written record appears in a German game anthology from 1783, according to card game historian David Parlett.',
+                    },
+                    {
+                        question: 'Why did jigsaw puzzles become so popular during the Great Depression?',
+                        answer: 'Die-cutting technology made cardboard puzzles cheap to produce, and they could be shared and reused — making them ideal entertainment during a period of economic hardship. At peak popularity in 1933, Americans were buying roughly 10 million puzzles per week.',
+                    },
+                    {
+                        question: 'Why did Microsoft include Solitaire in Windows?',
+                        answer: 'Microsoft Solitaire was developed by intern Wes Cherry and included in Windows 3.0 in 1990 as a tool to teach users mouse skills — specifically drag-and-drop. It became the most-played computer game in history as a side effect.',
+                    },
+                    {
+                        question: 'What is the connection between jigsaw puzzles and the 15-puzzle?',
+                        answer: 'The 15-puzzle — 15 numbered tiles in a 4×4 grid — was invented by Noyes Palmer Chapman around 1874 and became one of the biggest toy crazes of the 19th century. It directly inspired the sliding and tile-swapping mechanics used in many modern digital puzzle games.',
+                    },
+                ]} />
+
                 <Sources sources={[
                     { id: 1, text: 'Hannas, L. (1972). The English Jigsaw Puzzle 1760–1890. Wayland Publishers.' },
                     { id: 2, text: 'Williams, A. D. (2004). The Jigsaw Puzzle: Piecing Together a History. Berkley Books.' },
                     { id: 3, text: 'Parlett, D. (1990). The Oxford Guide to Card Games. Oxford University Press.' },
                     { id: 4, text: 'Slocum, J., & Sonneveld, D. (2006). The 15 Puzzle: How It Drove the World Crazy. Slocum Puzzle Foundation.' },
                 ]} />
+
+                <ArticleTags
+                    category="History"
+                    tags={['jigsaw puzzle history', 'solitaire history', 'puzzle origins', 'card games', 'Microsoft Solitaire']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'golden-age-of-puzzles', title: 'The Golden Age of Puzzles: How the Great Depression Made Jigsaws a Craze', excerpt: 'How economic hardship created a puzzle boom in 1930s America.', category: 'History', readTime: '9 min read' },

@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'The Neuroscience of Puzzle Solving: What Happens in Your Brain',
@@ -231,6 +234,15 @@ export default function NeurosciencePage() {
                     { id: 5, text: 'Pillai, J. A., et al. (2011). Association of crossword puzzle participation with memory decline in persons who develop dementia. Journal of the International Neuropsychological Society, 17(6), 1006–1013.' },
                     { id: 6, text: 'Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['neuroscience', 'dopamine', 'neuroplasticity', 'brain science', 'cognitive science']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'benefits-of-puzzle-games', title: '7 Brain Benefits of Playing Puzzle Games', excerpt: 'Science-backed cognitive benefits of making puzzles part of your routine.', category: 'Science', readTime: '6 min read' },

@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'How Puzzles Improve Focus and Attention in the Digital Age',
@@ -208,6 +211,15 @@ export default function PuzzlesAndFocusPage() {
                     { id: 6, text: 'Jaeggi, S. M., Buschkuehl, M., Jonides, J., & Perrig, W. J. (2008). Improving fluid intelligence with training on working memory. PNAS, 105(19), 6829–6833.', url: 'https://doi.org/10.1073/pnas.0801268105' },
                     { id: 7, text: 'Newport, C. (2016). Deep Work: Rules for Focused Success in a Distracted World. Grand Central Publishing.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['focus', 'concentration', 'attention', 'productivity', 'deep work']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'neuroscience-of-puzzle-solving', title: 'The Neuroscience of Puzzle Solving: What Happens in Your Brain', excerpt: 'A deep dive into dopamine, neural plasticity, and the brain regions activated by puzzles.', category: 'Science', readTime: '10 min read' },

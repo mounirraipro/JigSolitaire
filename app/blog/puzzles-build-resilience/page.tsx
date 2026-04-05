@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'How Puzzles Build Resilience and Patience in Children',
@@ -215,6 +218,15 @@ export default function PuzzlesBuildResiliencePage() {
                     { id: 5, text: 'Levine, S. C., et al. (2012). Early puzzle play: A predictor of preschoolers\' spatial transformation skill. Developmental Psychology, 48(2), 530–542.', url: 'https://doi.org/10.1037/a0025913' },
                     { id: 6, text: 'Duckworth, A. L., & Gross, J. J. (2014). Self-control and grit: Related but separable determinants of success. Current Directions in Psychological Science, 23(5), 319–325.' },
                 ]} />
+
+                <ArticleTags
+                    category="Family"
+                    tags={['resilience', 'growth mindset', 'children', 'grit', 'patience']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'best-puzzle-games-for-kids', title: 'Best Puzzle Games for Kids in 2025', excerpt: 'Curated list of safe, educational, and fun puzzle games for children.', category: 'Family', readTime: '6 min read' },

@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'How to Choose the Right Puzzle Difficulty for Your Skill Level',
@@ -237,6 +240,15 @@ export default function ChoosePuzzleDifficultyPage() {
                     { id: 4, text: 'Levine, S. C., Ratliff, K. R., Huttenlocher, J., Cannon, J. (2012). Early puzzle play and spatial skill. Developmental Psychology, 48(2), 530-542.', url: 'https://doi.org/10.1037/a0025913' },
                     { id: 5, text: 'Ericsson, K. A., Pool, R. (2016). Peak: Secrets from the New Science of Expertise. Houghton Mifflin Harcourt.' },
                 ]} />
+
+                <ArticleTags
+                    category="Reviews"
+                    tags={['puzzle difficulty', 'beginner guide', 'puzzle selection', 'skill level', 'challenge']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'how-to-get-better-at-jigsaw-puzzles', title: 'How to Get Better at Jigsaw Puzzles: 12 Skills That Actually Help', excerpt: 'Learn the practical habits that make puzzle solving smoother and faster.', category: 'Strategy', readTime: '12 min read' },

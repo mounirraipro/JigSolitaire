@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Pro Tips & Tricks to Master JigSolitaire',
@@ -141,6 +144,15 @@ export default function TipsAndTricksPage() {
                     { id: 2, text: 'Treisman, A. M., & Gelade, G. (1980). A feature-integration theory of attention. Cognitive Psychology, 12(1), 97–136.' },
                     { id: 3, text: 'Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.' },
                 ]} />
+
+                <ArticleTags
+                    category="Strategy"
+                    tags={['puzzle tips', 'JigSolitaire tips', 'tile-swap strategy', 'advanced techniques', 'winning strategies']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'pattern-recognition-skills', title: 'Pattern Recognition: The Hidden Skill Behind Every Great Puzzler', excerpt: 'How expert puzzlers develop their visual pattern matching abilities.', category: 'Strategy', readTime: '9 min read' },

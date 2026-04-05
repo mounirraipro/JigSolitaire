@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Are Puzzles Good for Anxiety and Stress? What the Research Actually Suggests',
@@ -223,6 +226,15 @@ export default function PuzzlesAnxietyStressPage() {
                     { id: 4, text: 'Kashdan, T. B., Rottenberg, J. (2010). Psychological flexibility as a fundamental aspect of health. Clinical Psychology Review, 30(7), 865-878.', url: 'https://doi.org/10.1016/j.cpr.2010.03.001' },
                     { id: 5, text: 'Seligman, M. E. P. (2011). Flourish. Free Press.' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['anxiety relief', 'stress', 'mental health', 'puzzle therapy', 'mindfulness']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'mindfulness-and-puzzles', title: 'Mindfulness and Puzzles: How Games Create Flow States', excerpt: 'Why puzzle play can feel like active meditation when challenge and focus line up.', category: 'Strategy', readTime: '9 min read' },

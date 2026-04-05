@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'The Golden Age of Puzzles: How the Great Depression Made Jigsaws a Craze',
@@ -214,6 +217,15 @@ export default function GoldenAgePage() {
                     { id: 4, text: 'NPD Group. (2020). U.S. Toy Industry Sales Report: Puzzle Category Analysis.' },
                     { id: 5, text: 'Slocum, J. (2001). The Tangram Book: The Story of the Chinese Puzzle with Over 2000 Puzzles to Solve. Sterling Publishing.' },
                 ]} />
+
+                <ArticleTags
+                    category="History"
+                    tags={['1930s puzzles', 'Great Depression', 'puzzle history', 'jigsaw craze', 'mass production']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'history-of-puzzle-games', title: 'The Fascinating History of Jigsaw & Solitaire Games', excerpt: 'From 18th-century dissected maps to modern digital puzzles.', category: 'History', readTime: '8 min read' },

@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'Puzzles vs. Social Media: What Science Says About Screen Quality',
@@ -227,6 +230,15 @@ export default function PuzzlesVsSocialMediaPage() {
                     { id: 4, text: 'Wood, W. (2019). Good Habits, Bad Habits: The Science of Making Positive Changes That Stick. Farrar, Straus and Giroux.' },
                     { id: 5, text: 'Twenge, J. M., & Campbell, W. K. (2018). Associations between screen time and lower psychological well-being among children and adolescents. Preventive Medicine Reports, 12, 271–283.', url: 'https://doi.org/10.1016/j.pmedr.2018.10.003' },
                 ]} />
+
+                <ArticleTags
+                    category="Science"
+                    tags={['screen time', 'social media', 'digital wellness', 'mental health', 'focus']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'puzzles-and-focus', title: 'How Puzzles Improve Focus and Attention in the Digital Age', excerpt: 'Combat digital distraction and reclaim your attention through puzzle solving.', category: 'Science', readTime: '9 min read' },

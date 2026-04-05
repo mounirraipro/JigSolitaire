@@ -4,6 +4,9 @@ import AdSlot from '../../components/AdSlot';
 import AuthorByline from '../../components/AuthorByline';
 import Sources from '../../components/Sources';
 import RelatedArticles from '../../components/RelatedArticles';
+import AuthorBioBox from '../../components/AuthorBioBox';
+import StarRating from '../../components/StarRating';
+import ArticleTags from '../../components/ArticleTags';
 
 export const metadata: Metadata = {
     title: 'How Seniors Can Use Puzzles to Stay Mentally Sharp',
@@ -213,6 +216,15 @@ export default function PuzzlesForSeniorsPage() {
                     { id: 4, text: 'Stern, Y. (2012). Cognitive reserve in ageing and Alzheimer\'s disease. The Lancet Neurology, 11(11), 1006–1012.', url: 'https://doi.org/10.1016/S1474-4422(12)70191-6' },
                     { id: 5, text: 'Ngandu, T., et al. (2015). A 2 year multidomain intervention of diet, exercise, cognitive training, and vascular risk monitoring versus control (FINGER). The Lancet, 385(9984), 2255–2263.', url: 'https://doi.org/10.1016/S0140-6736(15)60461-5' },
                 ]} />
+
+                <ArticleTags
+                    category="Reviews"
+                    tags={['seniors', 'cognitive health', 'aging', 'dementia prevention', 'elderly activities']}
+                />
+
+                <StarRating />
+
+                <AuthorBioBox />
 
                 <RelatedArticles articles={[
                     { slug: 'benefits-of-puzzle-games', title: '7 Brain Benefits of Playing Puzzle Games', excerpt: 'Seven science-backed cognitive benefits of regular puzzle practice.', category: 'Science', readTime: '6 min read' },
