@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import JsonLd from '../components/JsonLd';
+
 export const metadata: Metadata = {
     title: 'FAQ – JigSolitaire',
     description: 'Frequently asked questions about JigSolitaire. Find answers about gameplay, features, device support, and more.',
@@ -40,9 +42,23 @@ const faqs = [
     },
 ];
 
+const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+        },
+    })),
+};
+
 export default function FAQPage() {
     return (
         <>
+            <JsonLd schema={faqSchema} />
             <div className="page-header">
                 <div className="container">
                     <h1 className="gradient-text">Frequently Asked Questions</h1>

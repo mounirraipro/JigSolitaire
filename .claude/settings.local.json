@@ -5,7 +5,10 @@
       "Bash(grep -v \"\\\\.tsx$\")",
       "Bash(python3:*)",
       "Bash(npx tsc:*)",
-      "Bash(mv /tmp/globals_trimmed.css /mnt/c/Users/lhssa/projects/jigsolitaire/app/globals.css)"
+      "Bash(mv /tmp/globals_trimmed.css /mnt/c/Users/lhssa/projects/jigsolitaire/app/globals.css)",
+      "Bash(npx skills:*)",
+      "Bash(xargs ls:*)",
+      "Bash(grep -v \"^--$\")"
     ]
   }
 }

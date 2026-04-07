@@ -1,4 +1,34 @@
 import type { Metadata } from 'next';
+import JsonLd from '../components/JsonLd';
+
+const aboutSchema = [
+    {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'About JigSolitaire',
+        url: 'https://jigsolitaire.online/about',
+        description: 'Learn about JigSolitaire, our mission to create the ultimate free online puzzle experience, and the team behind the game.',
+        publisher: {
+            '@type': 'Organization',
+            name: 'JigSolitaire',
+            url: 'https://jigsolitaire.online',
+        },
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Lahcen Aharouane',
+        jobTitle: 'Puzzle Designer & Product Manager',
+        url: 'https://jigsolitaire.online/about',
+        worksFor: {
+            '@type': 'Organization',
+            name: 'JigSolitaire',
+            url: 'https://jigsolitaire.online',
+        },
+        description: 'Puzzle game designer with over 7 years of experience building browser-based games and educational software.',
+    },
+];
+
 export const metadata: Metadata = {
     title: 'About Us – JigSolitaire',
     description: 'Learn about JigSolitaire, our mission to create the ultimate free online puzzle experience, and the team behind the game.',
@@ -8,6 +38,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
+            <JsonLd schema={aboutSchema} />
             <div className="page-header">
                 <div className="container">
                     <h1 className="gradient-text">About JigSolitaire</h1>

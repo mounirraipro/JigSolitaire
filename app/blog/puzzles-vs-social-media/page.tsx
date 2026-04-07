@@ -42,6 +42,37 @@ export default function PuzzlesVsSocialMediaPage() {
                     implications for mental health and brain function are significant.
                 </p>
 
+                <h2>The Numbers Behind the Comparison</h2>
+                <p>
+                    To understand why this comparison matters, some context on scale is useful. The average
+                    American adult spent approximately 7 hours and 4 minutes per day on screens in 2024,
+                    according to data from Statista. Social media alone accounted for roughly 2 hours and
+                    23 minutes of that daily total. Over the course of a year, that is approximately
+                    870 hours spent scrolling feeds, watching short-form videos, and checking for notifications.
+                </p>
+                <p>
+                    Now consider what 870 hours of even moderate cognitive engagement would produce.
+                    Research on skill acquisition consistently shows that 200 hours of deliberate practice
+                    in any domain produces measurable skill improvements. 870 hours of focused, engaged
+                    activity — puzzle solving, language learning, music practice, creative writing —
+                    would be a genuinely life-changing investment in almost any direction a person chose.
+                </p>
+                <p>
+                    This is not an argument that social media time should be replaced entirely with puzzle
+                    solving. It is an argument that the hours we currently devote to passive scrolling
+                    represent an enormous pool of time that could be differently allocated with dramatically
+                    different cognitive outcomes — without requiring any reduction in screen use at all.
+                    Simply redirecting a portion of existing screen time toward more active, engaging
+                    activities produces a different brain over years and decades.
+                </p>
+                <p>
+                    The mechanism is straightforward. Attention is not infinite — it depletes and it
+                    strengthens based on how it is used. Hours spent in the shallow, rapid-switching mode
+                    of social media scrolling train the brain to expect and seek that mode. Hours spent
+                    in the sustained, goal-directed mode of puzzle solving train the opposite. Over time,
+                    the brain you have reflects the patterns of use you have maintained.
+                </p>
+
                 <h2>Defining Active vs. Passive Screen Time</h2>
                 <p>
                     Researchers increasingly distinguish between &ldquo;active&rdquo; and &ldquo;passive&rdquo;
@@ -208,6 +239,39 @@ export default function PuzzlesVsSocialMediaPage() {
                     <li><strong>Start small.</strong> Aim to replace one social media session per day with a puzzle session. A 10-minute puzzle during your lunch break instead of Instagram scrolling is a meaningful cognitive upgrade.</li>
                     <li><strong>Notice the difference.</strong> After a week, compare how you feel after a puzzle session versus a social media session. The contrast often provides enough motivation to sustain the change.</li>
                 </ol>
+
+                <h2>This Is Not an Argument for Quitting Social Media</h2>
+                <p>
+                    It is worth being explicit about what this comparison does and does not mean. Social
+                    media is not inherently harmful, and the research is not arguing that everyone should
+                    delete their accounts and replace scrolling with sudoku. The research is much more
+                    specific than that.
+                </p>
+                <p>
+                    The cognitive problems associated with social media are specifically linked to
+                    <em>passive, habitual scrolling</em> — the kind of mindless checking that happens
+                    without intention or social purpose. Direct messaging a friend, sharing creative work,
+                    following communities around topics you genuinely care about — these are active,
+                    purposeful uses of social media that have different cognitive and social profiles
+                    from the dopamine-loop scrolling that platforms are designed to maximize.
+                </p>
+                <p>
+                    The distinction matters because it points toward a more practical intervention than
+                    quitting social media entirely. The goal is intentional use versus habitual use —
+                    picking up your phone because you want to do something specific versus picking it
+                    up because you are bored and it is there. Puzzle games are a useful tool for the
+                    second scenario because they satisfy the same underlying impulse (stimulation during
+                    idle time) without the cognitive downsides of passive scrolling.
+                </p>
+                <p>
+                    The research on habit substitution supports this approach. Wendy Wood&apos;s work on
+                    behavioral change consistently shows that trying to simply stop a habitual behavior
+                    — without replacing it with something — fails much more often than replacing the
+                    behavior with a different one that serves the same function. If you reach for your
+                    phone every time you feel slightly bored, trying to stop reaching for your phone is
+                    fighting your own nervous system. Replacing the destination — puzzles instead of
+                    Instagram — works with that impulse rather than against it.
+                </p>
 
                 <h2>The Bottom Line</h2>
                 <p>

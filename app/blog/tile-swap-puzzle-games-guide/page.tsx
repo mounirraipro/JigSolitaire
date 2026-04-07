@@ -41,6 +41,32 @@ export default function TileSwapPuzzleGamesGuidePage() {
                     behind why they are so compelling, and the best picks available today.
                 </p>
 
+                <h2>What Makes Tile-Swap Games Worth Playing</h2>
+                <p>
+                    There is a specific quality to tile-swap puzzle solving that distinguishes it from
+                    almost every other puzzle format: every problem is visible and all the information
+                    you need is already in front of you. In chess, you must anticipate moves that have
+                    not happened yet. In a mystery novel, key information is withheld by design. In a
+                    tile-swap puzzle, the scrambled grid contains exactly what you need to solve it —
+                    the challenge is purely in the reading and the planning, not in any information gap.
+                </p>
+                <p>
+                    This &ldquo;complete information&rdquo; quality makes tile-swap puzzles particularly
+                    satisfying to reflect on after completion. You can look back at the starting position
+                    and trace the path you took. You can identify where you were efficient and where you
+                    lost moves. That retrospective analysis is available precisely because nothing was
+                    hidden — every decision was made on full information, which means every decision is
+                    genuinely analyzable.
+                </p>
+                <p>
+                    For players who enjoy optimization, this creates an almost infinite depth of engagement.
+                    Completing a puzzle is one goal. Completing it in fewer moves than last time is another.
+                    Finding the theoretical minimum sequence — the fewest possible moves needed to reach
+                    the solution from any given starting position — is a mathematical problem that has
+                    engaged puzzle enthusiasts for over a century. You can engage with any of these
+                    levels depending on your interests.
+                </p>
+
                 <h2>A Brief History of Tile-Swap Puzzles</h2>
                 <p>
                     The tile-swap genre was born in 1874 when Noyes Palmer Chapman created what would
@@ -125,6 +151,64 @@ export default function TileSwapPuzzleGamesGuidePage() {
                     <li><strong>Use colour/pattern zones.</strong> Group tiles by their dominant visual region (sky, ground, border, center subject) before fine-tuning positions within each zone.</li>
                     <li><strong>Never move a correct tile unnecessarily.</strong> Once a tile is in the right position, treat it as off-limits unless unavoidable. Displacing a correctly placed tile reverses progress and often cascades.</li>
                 </ol>
+
+                <h2>Why Tile-Swap Puzzles Feel Different from Jigsaws</h2>
+                <p>
+                    People who love physical jigsaw puzzles sometimes approach tile-swap games with the
+                    assumption that the experience will be similar. In important ways it is — you are still
+                    reconstructing a scrambled image — but the cognitive experience differs in ways that
+                    catch first-time players off guard.
+                </p>
+                <p>
+                    In a traditional jigsaw, each piece has an irregular shape that serves as a second
+                    layer of information. You can eliminate impossible placements purely based on shape
+                    before you have thought about the image at all. Tile-swap games strip away that
+                    layer entirely. Every tile is an identical rectangle. The only information available
+                    is visual content, which means every placement decision is a pure image-recognition
+                    problem.
+                </p>
+                <p>
+                    This changes the cognitive challenge in an interesting way. Tile-swap puzzles engage
+                    visual-spatial reasoning more directly, without the shape-matching shortcut. Players
+                    who are strong visual pattern recognizers — people who quickly read color distributions
+                    and identify partial shapes — often find tile-swap games more intuitive than jigsaws
+                    despite their apparent simplicity. Players who relied heavily on shape-fitting in
+                    traditional jigsaws sometimes find the switch unexpectedly challenging.
+                </p>
+                <p>
+                    There is also a strategic dimension that jigsaws largely lack. In a jigsaw, you
+                    search for the correct piece and place it once you find it. In a tile-swap game,
+                    every tile is already on the board — the challenge is finding the most efficient
+                    sequence of swaps to reach the solved state. This is closer to the cognitive task
+                    of chess or planning a route than it is to search-and-place puzzle solving. Players
+                    who enjoy planning and optimization often find this mechanic more engaging than
+                    traditional formats.
+                </p>
+
+                <h2>The Mathematics Behind Tile Puzzles</h2>
+                <p>
+                    Tile-swap puzzles have an interesting mathematical history. The original 15-puzzle
+                    became famous in the 1880s partly because of a mathematical mystery: Samuel Loyd
+                    offered a $1,000 prize (equivalent to over $30,000 today) to anyone who could solve
+                    a specific starting configuration. The prize was never claimed because that specific
+                    configuration was unsolvable — exactly half of all possible starting positions in the
+                    15-puzzle are mathematically unreachable from the goal state.
+                </p>
+                <p>
+                    Modern direct-swap games like JigSolitaire sidestep this problem entirely. Because
+                    any tile can swap with any adjacent tile — without the constraint of the single empty
+                    space — every scrambled configuration is solvable. This makes the game more satisfying:
+                    you never have to worry about whether the puzzle has a solution. It always does.
+                    The only question is how efficiently you can find it.
+                </p>
+                <p>
+                    The minimum number of swaps required to solve a given configuration is a well-studied
+                    problem in combinatorics. For an n-tile direct-swap puzzle, the theoretical minimum
+                    is closely related to the number of cycles in the permutation — a concept from group
+                    theory that shows up in everything from sorting algorithms to molecular genetics.
+                    You do not need to understand the mathematics to play well, but it is a satisfying
+                    reminder that simple-looking puzzles can touch surprisingly deep mathematical structures.
+                </p>
 
                 <h2>Best Tile-Swap Puzzle Games Available Today</h2>
                 <h3>JigSolitaire (Browser, Free)</h3>

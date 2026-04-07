@@ -196,6 +196,40 @@ export default function PuzzlesBuildResiliencePage() {
                     opportunities, not as threats to their self-image.
                 </p>
 
+                <h2>The Hidden Lesson in Every Wrong Placement</h2>
+                <p>
+                    There is a specific moment in puzzle solving that deserves attention as a developmental
+                    opportunity. It happens when a child (or adult) places a tile with confidence, only
+                    to discover it was wrong. The immediate response to this moment varies considerably,
+                    and how adults respond to it determines whether the moment becomes a learning experience
+                    or a source of shame.
+                </p>
+                <p>
+                    In a fixed mindset framework, a wrong placement is evidence of inadequacy: &ldquo;I got
+                    it wrong, which means I am not good at this.&rdquo; In a growth mindset framework, a wrong
+                    placement is useful information: &ldquo;That approach didn&apos;t work, so I need to try
+                    something different.&rdquo; The puzzle itself does not dictate which interpretation
+                    the child adopts — the adult in the room does.
+                </p>
+                <p>
+                    Language matters enormously here. The difference between &ldquo;That&apos;s wrong — look at
+                    the color more carefully&rdquo; and &ldquo;Hmm, that one didn&apos;t fit — what if we try
+                    looking at the color on the left edge?&rdquo; is significant. The first statement
+                    focuses on the error. The second models the investigative, try-something-different
+                    response that characterizes resilient problem-solvers. Children internalize the
+                    cognitive style of adults around them far more readily than they internalize
+                    explicit instructions about how to think.
+                </p>
+                <p>
+                    This is why family puzzle sessions are particularly valuable developmental environments.
+                    Every wrong placement is a live demonstration of how a trusted adult responds to
+                    failure. If parents visibly model curiosity and persistence rather than frustration
+                    when their own placements are wrong, children absorb that template. The lesson is not
+                    &ldquo;don&apos;t make mistakes&rdquo; — it is &ldquo;mistakes are how you figure things out.&rdquo;
+                    That lesson, repeated consistently over dozens of puzzle sessions, builds something
+                    durable in a child&apos;s relationship with challenge.
+                </p>
+
                 <h2>The Long-Term View</h2>
                 <p>
                     The resilience, patience, and growth mindset that puzzles develop aren&apos;t just useful

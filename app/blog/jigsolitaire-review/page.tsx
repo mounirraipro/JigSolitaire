@@ -41,6 +41,38 @@ export default function JigSolitaireReviewPage() {
                     there is room to grow, and who will love it most.
                 </p>
 
+                <h2>First Impressions and Learning Curve</h2>
+                <p>
+                    The first puzzle I solved in JigSolitaire was a level-1 Animals puzzle: a red squirrel
+                    photographed against autumn leaves. Nine tiles, a 3×3 grid, a five-second preview.
+                    I started with what seemed obvious — the squirrel&apos;s face was clearly not in the
+                    bottom-left corner — and made a few moves that turned out to be wrong before settling
+                    on the right approach. The whole puzzle took about three minutes and left me with a
+                    clear sense of what the game was doing mechanically.
+                </p>
+                <p>
+                    The merge effect appeared for the first time when I correctly placed two adjacent
+                    tiles — the squirrel&apos;s tail next to its body — and they visually locked together
+                    with a satisfying animation. That small moment communicated everything essential about
+                    the game&apos;s design philosophy: correct placements are confirmed immediately and
+                    rewarded tangibly. You are never left guessing whether you got something right.
+                </p>
+                <p>
+                    By the third or fourth puzzle, the core mechanic felt natural. By the tenth, I
+                    was developing deliberate strategies — looking for tiles with distinctive visual
+                    features before touching anything, using the merge groups as spatial anchors,
+                    mentally mapping color zones before my first move. The game teaches its own
+                    best strategies through experience rather than through explicit instruction, which
+                    is almost always the better pedagogical approach.
+                </p>
+                <p>
+                    The difficulty step between levels is calibrated well. Level 1 (9 tiles) and level 2
+                    (10 tiles) are accessible to anyone. Level 3 introduces a notable complexity jump
+                    that will stump beginners but not discourage them. Levels 4 and 5 feel genuinely
+                    challenging even for experienced players — particularly in the Art and Food categories.
+                    This difficulty curve is one of the more thoughtful aspects of the design.
+                </p>
+
                 <h2>What Is JigSolitaire?</h2>
                 <p>
                     JigSolitaire is a free, browser-based puzzle game that scrambles a photograph into a
@@ -114,6 +146,47 @@ export default function JigSolitaireReviewPage() {
 
                 <AdSlot type="in-content" />
 
+                <h2>Category by Category: What to Expect</h2>
+                <p>
+                    Having played every level in every category, here is a more granular breakdown of
+                    what each one actually delivers:
+                </p>
+                <p>
+                    <strong>Animals</strong> is the strongest category for beginners and perhaps the most
+                    consistently satisfying across all skill levels. Wildlife photography provides high
+                    contrast between subjects and backgrounds, and the distinctive textures of fur, feathers,
+                    and scales give individual tiles strong visual identity. A close-up of a tiger&apos;s face
+                    at level 4 or 5 is genuinely challenging but never frustrating — every tile has enough
+                    visual character to distinguish it from neighbors.
+                </p>
+                <p>
+                    <strong>Nature</strong> is the most variable. Some landscape images are fairly
+                    straightforward because the sky, midground, and foreground naturally divide into
+                    distinct color zones. Others — particularly macro shots with repeating texture — are
+                    much harder than their difficulty rating suggests. This unpredictability is either a
+                    feature or a bug depending on how you approach challenge.
+                </p>
+                <p>
+                    <strong>Cities</strong> brought some of my favorite solving experiences. The architectural
+                    geometry creates clear line continuations across tiles, which makes it satisfying to
+                    extend a correctly placed row or column. Night cityscape images are particularly striking
+                    to reconstruct — the contrast between illuminated windows and dark sky makes each tile
+                    almost self-identifying.
+                </p>
+                <p>
+                    <strong>Art</strong> is hard. Not frustratingly hard, but genuinely challenging in ways
+                    that took me by surprise. Painted images lack the sharp visual boundaries of photography,
+                    and blended colors across adjacent tiles can be genuinely difficult to differentiate.
+                    If you want to test your pattern recognition skills, the Art category at levels 4 and 5
+                    is the place to do it.
+                </p>
+                <p>
+                    <strong>Food</strong> is deceptively difficult. Close-up food photography features
+                    repeating textures — bread crumbs, meat marbling, seed patterns — that make individual
+                    tiles look frustratingly similar. Experienced players who find the Animals category
+                    too easy often find that a level-3 Food puzzle provides more resistance than expected.
+                </p>
+
                 <h2>What Could Be Better</h2>
                 <p>
                     No review is complete without honest critique. A few areas where JigSolitaire has
@@ -132,6 +205,35 @@ export default function JigSolitaireReviewPage() {
                     <li><strong>Undo button:</strong> One misfire drag can cascade into several corrective
                     moves. An undo option would lower frustration without reducing challenge.</li>
                 </ul>
+
+                <h2>Who Will Enjoy JigSolitaire Most</h2>
+                <p>
+                    Not every puzzle game is for every player, and JigSolitaire has a fairly clear
+                    profile of who will find it most engaging.
+                </p>
+                <p>
+                    It resonates most strongly with players who enjoy visual pattern recognition over
+                    purely logical deduction. If you love crosswords and sudoku primarily for the number
+                    logic, JigSolitaire&apos;s visual-spatial focus may feel less interesting to you.
+                    If you enjoy jigsaw puzzles, nature photography, and the satisfaction of a
+                    well-solved spatial problem, you will likely find JigSolitaire immediately appealing.
+                </p>
+                <p>
+                    Adults who feel underserved by the mobile puzzle game market — people who want a
+                    genuine cognitive challenge without manipulative monetization or childish aesthetics —
+                    represent the clearest match. The game&apos;s calm aesthetic, beautiful photography,
+                    and absence of pressure mechanics make it a notably relaxing experience compared to
+                    most free alternatives, while the strategic depth at higher difficulties ensures
+                    it does not become mindless.
+                </p>
+                <p>
+                    It is also well-suited to older adults who want accessible cognitive engagement.
+                    The interface is clean and uncluttered. There is no time pressure on any level.
+                    The difficulty gradient starts gently and the controls are simple enough to learn
+                    in one session. For seniors who want to engage with digital games but find many
+                    options either too fast, too complex, or too dependent on gaming conventions they
+                    did not grow up with, JigSolitaire is one of the more welcoming entry points available.
+                </p>
 
                 <h2>How It Compares to Alternatives</h2>
                 <p>

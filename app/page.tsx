@@ -241,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ HOW TO PLAY — vertical steps timeline ═══════════════════════ */}
+      {/* ══ HOW TO PLAY — card grid ══════════════════════════════════════ */}
       <section className="lp-section lp-section-tinted">
         <div className="container">
           <div className="lp-section-head">
@@ -250,22 +250,15 @@ export default function Home() {
             <p>Five simple steps from scrambled tiles to a perfectly restored image.</p>
           </div>
 
-          <div className="lp-steps">
+          <div className="lp-how-grid">
             {STEPS.map((step, i) => (
-              <div key={step.title} className="lp-step">
-                <div className="lp-step-col">
-                  <div className="lp-step-num">
-                    <span>{String(i + 1).padStart(2, '0')}</span>
-                  </div>
-                  {i < STEPS.length - 1 && <div className="lp-step-line" aria-hidden="true" />}
+              <div key={step.title} className="lp-how-card">
+                <span className="lp-how-num">{String(i + 1).padStart(2, '0')}</span>
+                <div className="lp-how-icon">
+                  <Icon name={step.icon} size={22} />
                 </div>
-                <div className="lp-step-body">
-                  <div className="lp-step-icon">
-                    <Icon name={step.icon} size={20} />
-                  </div>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
               </div>
             ))}
           </div>

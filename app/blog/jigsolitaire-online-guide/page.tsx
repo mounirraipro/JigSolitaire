@@ -40,6 +40,35 @@ export default function JigSolitaireOnlineGuidePage() {
                     efficient solve.
                 </p>
 
+                <h2>Why This Game Is Different From Other Puzzle Games</h2>
+                <p>
+                    If you have played sliding tile puzzles before — the kind where you move numbered
+                    tiles around a grid with one empty space — JigSolitaire will feel immediately more
+                    accessible. The frustrating constraint of the sliding puzzle is that you can only
+                    move tiles into the empty space, which means getting any specific tile to its
+                    correct position often requires a long, indirect sequence of moves that feels
+                    counterproductive. You are solving a mathematical constraint problem as much as
+                    a visual recognition problem.
+                </p>
+                <p>
+                    JigSolitaire works differently. Any tile can swap directly with any adjacent tile.
+                    There is no empty space. This means you can always move directly toward your goal —
+                    there are no &ldquo;impossible&rdquo; starting configurations and no situations where
+                    you are forced to temporarily make things worse in order to make eventual progress.
+                    Every move can potentially be productive. This fundamental difference makes the
+                    game far more satisfying to play, especially for beginners.
+                </p>
+                <p>
+                    If you have played traditional jigsaw puzzles, the comparison is also interesting.
+                    JigSolitaire is solving the same basic problem — reconstructing a scrambled photograph —
+                    but without the shape-fitting element that jigsaws rely on. Every tile is an identical
+                    rectangle. The only information you have is visual content and position. This removes
+                    one layer of information (shape matching) but keeps the core challenge (image reconstruction
+                    and spatial reasoning) intact. Players who are strong at reading images often find
+                    JigSolitaire more engaging than traditional jigsaws because it is a purer test of
+                    visual pattern recognition.
+                </p>
+
                 <h2>The Basics: What You Are Trying to Do</h2>
                 <p>
                     Every JigSolitaire puzzle presents you with a scrambled grid of image tiles. Your goal is to
@@ -133,6 +162,63 @@ export default function JigSolitaireOnlineGuidePage() {
                     — identify their target positions, plan the swap sequence, and execute cleanly.
                     A single wrong swap at this stage can scatter a large merged group and undo significant
                     progress.
+                </p>
+
+                <h2>How Category Choice Affects Your Strategy</h2>
+                <p>
+                    Not all puzzle categories play the same way, and choosing the right category for
+                    your skill level is genuinely important. Here is what to expect from each one:
+                </p>
+                <p>
+                    <strong>Animals</strong> tends to be the most beginner-friendly category. Wildlife
+                    photography typically features a high-contrast subject (the animal) against a simpler
+                    background. You can usually identify the subject tiles quickly and build outward from
+                    them. Fur patterns, eyes, and distinctive markings provide strong placement cues even
+                    on small tiles.
+                </p>
+                <p>
+                    <strong>Nature</strong> varies considerably depending on the image. A mountain
+                    landscape with a clear sky, rocky terrain, and forest zone is relatively easy to
+                    navigate because the color regions are distinct. A macro shot of leaves or flowers
+                    with subtle texture variations across the whole image is much harder.
+                </p>
+                <p>
+                    <strong>Cities</strong> brings architectural geometry into play. Buildings, windows,
+                    and streets create strong line continuations that experienced players can use to their
+                    advantage. If you can find a tile with a distinctive window pattern or architectural
+                    feature, it anchors a large surrounding area. The challenge is in uniformly colored
+                    sections like open sky above a skyline.
+                </p>
+                <p>
+                    <strong>Art</strong> is the trickiest category for most players because painted and
+                    illustrated works often use subtle blended colors without the sharp visual boundaries
+                    that photographs naturally provide. An impressionist painting may have similar hues
+                    across many tiles that are genuinely hard to differentiate at the scale of a single
+                    tile. Save this category for when you are comfortable with the mechanic.
+                </p>
+                <p>
+                    <strong>Food</strong> close-ups can surprise players who expect them to be easy.
+                    Because the camera is close to the subject, the resulting tiles often show fine
+                    texture details that repeat across much of the image — think of bread crumb texture
+                    or the marbling in a piece of cheese. This makes individual tile placement much
+                    harder than the overall image might suggest.
+                </p>
+
+                <h2>Tracking Your Progress</h2>
+                <p>
+                    JigSolitaire tracks both move count and time for each puzzle. While neither metric
+                    is shown during gameplay — which keeps the experience pressure-free — you will see
+                    your result when the puzzle completes. Use these numbers honestly. A 3×3 puzzle
+                    solved in 24 moves is perfectly respectable for a beginner, but if you are still
+                    at 24 moves after a month of regular play, that plateau tells you something useful:
+                    you have probably stopped thinking strategically and started solving on autopilot.
+                </p>
+                <p>
+                    The most instructive thing to track is your <em>worst</em> performance on a given
+                    grid size, not your best. Personal bests are satisfying but they often reflect
+                    favorable scramble configurations rather than peak skill. Tracking how you handle
+                    difficult scrambles — ones where the most obvious tiles land in unhelpful positions —
+                    gives a truer picture of your skill development.
                 </p>
 
                 <h2>Controls Summary</h2>

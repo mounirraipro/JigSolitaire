@@ -105,6 +105,37 @@ export default function GoldenAgePage() {
                     table in the White House.
                 </p>
 
+                <h2>The Puzzle Rental Economy</h2>
+                <p>
+                    One of the more fascinating aspects of the Depression-era puzzle craze was the informal
+                    exchange economy it created. Because even a quarter was real money in 1933, families
+                    found ways to stretch their puzzle budgets. Neighborhood swap networks sprang up
+                    organically: a family would complete a puzzle, trade it with the neighbors for theirs,
+                    and work through a rotating library that cost almost nothing to participate in.
+                </p>
+                <p>
+                    Commercial puzzle libraries soon formalized this practice. Drugstores, five-and-dime
+                    stores, and stationery shops began renting puzzles — typically for three to five cents
+                    per day — and allowing customers to swap finished puzzles for new ones. This rental
+                    model was genuinely innovative as a commercial practice and directly anticipated the
+                    video rental store model that would dominate entertainment economics fifty years later.
+                </p>
+                <p>
+                    The weekly puzzle series became another important commercial innovation. Publishers
+                    released new puzzle designs on a fixed day each week, creating the anticipation and
+                    routine that we now associate with episodic entertainment — weekly TV shows, podcast
+                    episodes, newsletter issues. The Jig of the Week series and similar publications
+                    had dedicated subscriber bases who waited for each new release the way later generations
+                    would wait for the next episode of a favorite series.
+                </p>
+                <p>
+                    What is striking about all of these innovations is that they arose not from clever
+                    marketing departments but from genuine necessity. Economic hardship forced people
+                    to be creative about how to access entertainment affordably, and the puzzle ecosystem
+                    adapted accordingly. The result was a set of distribution models that proved remarkably
+                    durable and influential far beyond the puzzle category itself.
+                </p>
+
                 <h2>The Psychology of Puzzles in Crisis</h2>
                 <p>
                     Why did Americans turn to puzzles so fervently during the Depression? Historians and

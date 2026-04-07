@@ -40,6 +40,35 @@ export default function WhatIsJigSolitairePage() {
                     it stand out, and who it&apos;s designed for.
                 </p>
 
+                <h2>The Problem JigSolitaire Was Designed to Solve</h2>
+                <p>
+                    Traditional sliding tile puzzles — the ones with 15 numbered tiles and one empty
+                    space — have been around since the 1870s. They are elegant mathematical objects,
+                    but they have a well-known frustration problem: reaching any specific tile&apos;s
+                    correct position often requires moving it indirectly, through a long sequence of
+                    intermediate moves that feel counterproductive. Players frequently find themselves
+                    undoing progress they made earlier just to route a tile through an available path.
+                </p>
+                <p>
+                    Traditional jigsaw puzzles solve this differently. Each piece has a unique irregular
+                    shape that serves as a secondary identification layer — you can use shape alone to
+                    narrow down a piece&apos;s possible positions even before considering its image content.
+                    But jigsaws have their own friction: they require physical space, time commitment,
+                    and the tedious process of sifting through hundreds of pieces looking for the specific
+                    one you need.
+                </p>
+                <p>
+                    JigSolitaire occupies the space between these two formats. It takes the visual
+                    image-reconstruction appeal of jigsaw puzzles and combines it with a direct-swap
+                    mechanic (no empty space, no indirect routing required) that eliminates the main
+                    frustration of sliding puzzles. The result is a format that is immediately intuitive,
+                    always solvable, and requires no setup or physical space. The puzzle fits in a
+                    browser tab and can be completed in five to twenty minutes depending on difficulty.
+                    That combination — jigsaw-style visual satisfaction, sliding-puzzle brevity, none
+                    of the friction of either — is what makes the game genuinely original rather than
+                    just a variant of existing formats.
+                </p>
+
                 <h2>The Concept</h2>
                 <p>
                     At its core, JigSolitaire is deceptively simple. You&apos;re presented with a grid of tiles —
@@ -111,6 +140,45 @@ export default function WhatIsJigSolitairePage() {
                 </p>
 
                 <AdSlot type="in-content" />
+
+                <h2>What a Typical Session Actually Feels Like</h2>
+                <p>
+                    Descriptions of puzzle mechanics can only go so far. Here is what a real session with
+                    JigSolitaire actually feels like in practice.
+                </p>
+                <p>
+                    You pick a category — say, Animals at level 3 — and the puzzle opens with a brief
+                    preview of a photograph: a red fox against a winter forest. You get five seconds to
+                    look at it. This is barely enough to register the dominant colors and the general
+                    position of the fox. Then the tiles scatter.
+                </p>
+                <p>
+                    The first thing you notice is how obviously wrong some tiles look. The fox&apos;s distinctive
+                    orange-red sits in the top-right when it clearly belongs bottom-center. You move it.
+                    Then the tile next to it in the wrong spot is easier to identify because you have
+                    fewer tiles left to consider. After three or four obvious moves, you start building
+                    your first group — two adjacent correct tiles lock together with a satisfying visual
+                    click, and now that pair moves as one.
+                </p>
+                <p>
+                    The middle section of the puzzle is where strategy matters most. You have maybe six
+                    tiles correctly placed and grouped, four still scattered, and the remaining few in
+                    positions that almost look right but aren&apos;t. This is where you slow down. You look at
+                    the target mentally — where should this dark-green forest tile be relative to the fox
+                    group? — and make a deliberate choice rather than a guess.
+                </p>
+                <p>
+                    The final few moves, when most of the image is already one large group, feel almost
+                    inevitable. The remaining isolated tiles have only one place they can possibly go.
+                    You slide the last tile into position, the whole image locks, and for a moment the
+                    complete fox photograph is displayed before you — recognizable, sharp, right.
+                </p>
+                <p>
+                    That sequence — confusion, progress, acceleration, completion — is the emotional arc
+                    of every JigSolitaire puzzle. The specific images change, the difficulty scales, but
+                    the arc remains. It is a satisfying structure that keeps experienced players returning
+                    to harder and harder configurations trying to replicate that feeling more efficiently.
+                </p>
 
                 <h2>The Cognitive Benefits</h2>
                 <p>

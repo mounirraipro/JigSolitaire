@@ -1,5 +1,33 @@
 import type { Metadata } from 'next';
 import GameIframe from '../components/GameIframe';
+import JsonLd from '../components/JsonLd';
+
+const webAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'JigSolitaire',
+    url: 'https://jigsolitaire.online/play',
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires a modern web browser with JavaScript enabled.',
+    offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+    },
+    description:
+        'A free browser-based jigsaw solitaire puzzle game. Drag, drop, and swap tiles to restore beautiful images across 25+ levels in 5 categories.',
+    author: {
+        '@type': 'Person',
+        name: 'Lahcen Aharouane',
+        url: 'https://jigsolitaire.online/about',
+    },
+    publisher: {
+        '@type': 'Organization',
+        name: 'JigSolitaire',
+        url: 'https://jigsolitaire.online',
+    },
+};
 
 export const metadata: Metadata = {
     title: 'Play JigSolitaire – Free Online Puzzle Game',
@@ -13,6 +41,7 @@ export const metadata: Metadata = {
 export default function PlayPage() {
     return (
         <>
+            <JsonLd schema={webAppSchema} />
             {/* Game Section — full viewport */}
             <div className="play-layout">
                 {/* Game iframe */}

@@ -194,6 +194,48 @@ export default function PuzzlesForSeniorsPage() {
                     factors produced significant cognitive benefits in at-risk older adults.
                 </p>
 
+                <h2>Common Obstacles and How to Work Around Them</h2>
+                <p>
+                    Cognitive benefits require consistent engagement, and consistency requires overcoming
+                    practical obstacles. Older adults frequently encounter a few specific challenges when
+                    starting or maintaining a puzzle practice:
+                </p>
+                <p>
+                    <strong>Visual challenges.</strong> Reduced contrast sensitivity and visual acuity
+                    can make small puzzle pieces harder to distinguish. For physical jigsaw puzzles,
+                    choosing puzzles with large pieces (designed for children, though entirely appropriate
+                    for adults with vision challenges) and using good direct lighting helps considerably.
+                    For digital puzzles, the screen brightness and contrast can be adjusted, and many
+                    devices have accessibility settings that increase text and image contrast. A tablet
+                    with a larger screen is often preferable to a phone for this reason.
+                </p>
+                <p>
+                    <strong>Fine motor challenges.</strong> Arthritis and other conditions that affect
+                    hand dexterity can make manipulating small physical puzzle pieces painful or frustrating.
+                    Digital tile-swap games are often a more accessible alternative because the interaction
+                    requires only broad drag gestures — no pinching or fine placement is needed. Touch
+                    screens are generally more forgiving than mouse-based interfaces for people with
+                    limited fine motor control.
+                </p>
+                <p>
+                    <strong>Starting a new habit.</strong> Cognitive inertia is real — starting any new
+                    regular activity after years or decades of established routine requires deliberate
+                    effort. The research on habit formation consistently shows that the most effective
+                    approach is to attach a new behavior to an existing one. If you always have coffee
+                    at 9 AM, adding a 15-minute puzzle session immediately after creates a reliable
+                    context cue. The existing habit acts as the trigger for the new one.
+                </p>
+                <p>
+                    <strong>Motivation during low-energy periods.</strong> Older adults — like everyone —
+                    have days when starting any cognitively demanding activity feels unappealing. The
+                    solution here is not willpower but design: keeping puzzles easily accessible (a
+                    physical puzzle with the most recent progress left on the table, a puzzle game bookmarked
+                    on the device&apos;s home screen) reduces the activation energy required to start.
+                    Difficulty also matters: when motivation is low, choosing an easier puzzle configuration
+                    is smarter than skipping puzzle time entirely. A shorter, easier session still engages
+                    the neural pathways and maintains the habit.
+                </p>
+
                 <h2>The Bottom Line</h2>
                 <p>
                     The evidence is clear: regular puzzle engagement is associated with maintained cognitive

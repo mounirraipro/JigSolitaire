@@ -189,6 +189,39 @@ export default function PuzzlesAndFocusPage() {
                     <li><strong>Notice when your mind wanders.</strong> When you catch yourself losing focus during a puzzle, gently redirect your attention. This noticing-and-redirecting is the core mechanism of attention training — each time you do it, you strengthen the neural circuitry of attentional control.</li>
                 </ol>
 
+                <h2>The Recovery After Sessions</h2>
+                <p>
+                    One aspect of puzzle solving and focus that rarely gets discussed is what happens after
+                    a session ends. Research by Marc Berman at the University of Michigan on attention
+                    restoration theory suggests that activities requiring moderate, directed attention —
+                    as opposed to either effortful cognitive work or passive consumption — produce a
+                    recovery effect. The brain replenishes its attentional resources during activities
+                    with the right kind of cognitive engagement.
+                </p>
+                <p>
+                    Puzzle solving fits this profile well. It requires genuine engagement — you cannot
+                    solve a puzzle on autopilot — but it is not the kind of high-stakes, high-pressure
+                    cognition of work tasks that depletes attentional resources. The result is that many
+                    people feel sharper, not more tired, after a well-calibrated puzzle session. This is
+                    different from the depleted, restless feeling that often follows an extended social
+                    media session, and different from the mental fatigue that follows intense deep work.
+                </p>
+                <p>
+                    If you use puzzle sessions as breaks within a longer work day, timing matters. A 15-minute
+                    puzzle break after 90 minutes of focused work aligns with the ultradian rhythm research
+                    showing that human attention runs in approximately 90-minute cycles before requiring
+                    recovery. Using that recovery window for an engaging but non-stressful activity —
+                    rather than scrolling social media or watching videos — may help you return to deep
+                    work in a more replenished state.
+                </p>
+                <p>
+                    The practical implication is that puzzle solving is not just a leisure activity competing
+                    with other leisure activities. It can function as a deliberate cognitive tool — a way
+                    of managing your attentional resources across a long work day or study session. This
+                    positions it differently from entertainment: not something you do instead of working,
+                    but something you do <em>in service of</em> working better.
+                </p>
+
                 <h2>The Bigger Picture</h2>
                 <p>
                     In a world engineered to capture and fragment our attention, puzzle solving represents

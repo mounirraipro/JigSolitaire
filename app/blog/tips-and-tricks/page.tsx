@@ -37,6 +37,32 @@ export default function TipsAndTricksPage() {
                     cognitive science research to develop these evidence-based approaches.
                 </p>
 
+                <h2>Before You Start: Setting Yourself Up</h2>
+                <p>
+                    Most puzzle guides jump straight to in-game strategies. But a significant chunk of
+                    performance difference between experienced and novice players comes from what happens
+                    before the first move — specifically, the choice of puzzle and the mental state you
+                    bring to it.
+                </p>
+                <p>
+                    Category selection matters more than most players realize. Animals and Nature categories
+                    use high-contrast photography where each tile has distinctive visual features. Art
+                    and Food categories often use images where adjacent tiles look nearly identical due
+                    to smooth color gradients or repeating textures. If you are trying to learn the game&apos;s
+                    mechanics, starting with Animals level 1 or 2 is not a sign of timidity — it is
+                    smart calibration. The strategies you develop at low difficulty transfer directly
+                    to harder configurations. The confusion of an overly difficult first puzzle often
+                    teaches the wrong lessons.
+                </p>
+                <p>
+                    Physical environment matters too. Puzzle solving benefits from a quiet, distraction-free
+                    space — not because you need profound silence, but because the visual attention demands
+                    of tile identification are genuinely taxing and compete with other visual input.
+                    Playing on a phone while the TV is on in the background is a measurably worse
+                    experience than playing with full attention on a device you are properly focused on.
+                    The difference shows up in your move count.
+                </p>
+
                 <h2>Beginner Strategies</h2>
 
                 <h3>1. Study the Preview First</h3>
@@ -130,6 +156,66 @@ export default function TipsAndTricksPage() {
                     that benefit from deliberate practice.
                 </p>
 
+                <h2>Managing Frustration at the Board</h2>
+                <p>
+                    Here&apos;s something no strategy guide ever says plainly enough: frustration is not a sign
+                    you&apos;re doing it wrong. It&apos;s a sign you&apos;re working at the right level of difficulty.
+                    Every experienced puzzler knows the feeling — you&apos;ve been staring at the same cluster
+                    of tiles for five minutes and nothing makes sense. The instinct is to keep trying the
+                    same approaches harder. That rarely works.
+                </p>
+                <p>
+                    When you hit a wall, the most effective strategy is a brief reset: stop touching tiles,
+                    look at the full grid as a whole for about 30 seconds, then look back at the reference
+                    image. Almost every time, something clicks that wasn&apos;t visible when you were focused
+                    close-in. The brain does some of its best pattern recognition during these brief moments
+                    of defocused, panoramic attention. Staring hard at the problem is not always the same
+                    as seeing it clearly.
+                </p>
+                <p>
+                    One particularly useful trick is to mentally categorize each tile you&apos;re unsure about
+                    rather than moving it. If you can see that a tile probably belongs in the top-right
+                    quadrant but you don&apos;t know exactly where, just hold that information. Once two or
+                    three neighboring tiles get resolved, the position of the uncertain one often becomes
+                    obvious without any additional effort on your part.
+                </p>
+
+                <h2>Developing Your Own Style</h2>
+                <p>
+                    The tips above are starting points, not rules carved in stone. Experienced puzzlers
+                    develop their own signature approaches — some are linear solvers who work row by row
+                    with methodical precision. Others are pattern hunters who dart around the grid following
+                    color trails. A few players prefer to identify the most visually striking element of an
+                    image (a bright eye in an animal photo, a distinctive building) and build outward from
+                    that single anchor.
+                </p>
+                <p>
+                    None of these approaches is definitively superior. They reflect different cognitive
+                    styles: visual thinkers tend to work pattern-first, spatial thinkers tend to work
+                    zone-first, and analytical thinkers tend to work grid-structure-first. The best strategy
+                    is the one that feels natural enough to execute consistently and challenging enough to
+                    keep improving. If you find yourself solving purely on autopilot, the puzzle is probably
+                    too easy. If you find yourself spending more time confused than solving, try a lower
+                    difficulty until the core mechanics feel comfortable.
+                </p>
+
+                <h2>The Role of Difficulty Selection</h2>
+                <p>
+                    Most players instinctively stay within their comfort zone. This produces an enjoyable
+                    experience but limited growth. If your real goal is to get better — not just to relax —
+                    you need to deliberately choose puzzles one level above what feels comfortable at least
+                    some of the time. The struggle is productive. It builds the neural connections that make
+                    future puzzles at that difficulty feel easier.
+                </p>
+                <p>
+                    That said, pure challenge is not always the goal. There is genuine value in occasional
+                    sessions with easier puzzles, particularly when you are tired or stressed. These sessions
+                    exercise the same skills at a pace that feels more meditative than competitive. The
+                    research on deliberate practice distinguishes between skill-building sessions (high effort,
+                    high challenge) and maintenance sessions (moderate effort, consistent engagement). Both
+                    have their place in a healthy puzzle practice.
+                </p>
+
                 <h2>Practice Makes Perfect</h2>
                 <p>
                     The best way to improve is consistent, deliberate practice. Research by Ericsson et al.
@@ -137,6 +223,13 @@ export default function TipsAndTricksPage() {
                     current ability. Start with easier grids and gradually increase difficulty. You&apos;ll
                     naturally develop the pattern recognition and spatial reasoning skills that make each
                     puzzle feel more intuitive over time.
+                </p>
+                <p>
+                    It helps to track your progress in a casual way — not obsessively, but enough to notice
+                    trends. If you solved a 3x5 grid in 45 moves last week and 38 moves this week, that gap
+                    is meaningful. It represents actual skill development, not luck. These small improvements
+                    compound over time, and looking back at where you started is one of the most motivating
+                    things in any long-term practice.
                 </p>
 
                 <Sources sources={[

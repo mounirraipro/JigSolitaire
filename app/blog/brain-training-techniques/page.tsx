@@ -194,6 +194,44 @@ export default function BrainTrainingPage() {
                     <li><strong>Periodically:</strong> Introduce completely new activities to prevent cognitive plateau. If you always do crosswords, try spatial puzzles. If you always play the same instrument, learn a new one.</li>
                 </ul>
 
+                <h2>How to Evaluate Any Brain Training Claim</h2>
+                <p>
+                    The brain training industry has a significant marketing problem: the claims that sell
+                    products (become smarter, prevent Alzheimer&apos;s, dramatically improve IQ) are much
+                    larger than what the evidence actually supports. Here is a practical framework for
+                    evaluating any brain training claim you encounter:
+                </p>
+                <p>
+                    First, ask whether the evidence comes from a randomized controlled trial or from
+                    correlational studies. Correlational studies find that people who do X tend to have
+                    cognitive characteristic Y, but cannot establish that X caused Y. Randomized controlled
+                    trials — where people are randomly assigned to training or control conditions — provide
+                    much stronger evidence. The ACTIVE trial and the exercise research cited above are
+                    strong; most commercial app claims are not.
+                </p>
+                <p>
+                    Second, ask whether the claimed benefit is in the trained task or in an untrained one.
+                    Getting better at a brain training game is trivially guaranteed — you practice it, you
+                    improve at it. The meaningful question is whether that improvement transfers to real-world
+                    cognitive tasks you care about: memory for faces and names, focus at work, reasoning
+                    through a complex problem. Transfer effects are the hard part to demonstrate, and
+                    most commercial claims are based on improvement in the trained task, not on transfer.
+                </p>
+                <p>
+                    Third, ask what the comparison condition was. A study that shows brain training improves
+                    cognition compared to doing nothing is less impressive than one that shows it improves
+                    cognition compared to an equally engaging but non-cognitive activity. Many positive
+                    brain training results may partly reflect the social engagement, motivation, and novelty
+                    that come with participating in a research study — not the training itself.
+                </p>
+                <p>
+                    Applying these criteria honestly, the methods with the strongest evidence are exactly
+                    those that have been recommended for decades for other reasons: aerobic exercise,
+                    challenging mental activity, social engagement, and quality sleep. There are no shortcuts
+                    that work better than these fundamentals — but the fundamentals work reliably,
+                    cumulatively, and over a lifetime.
+                </p>
+
                 <h2>The Bottom Line</h2>
                 <p>
                     Brain training works — but the methods that work best aren&apos;t always the ones with the

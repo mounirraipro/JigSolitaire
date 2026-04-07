@@ -96,6 +96,34 @@ export default function RootLayout({
               url: "https://jigsolitaire.online",
               description:
                 "Free online jigsaw solitaire puzzle game with 25+ levels across 5 categories.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://jigsolitaire.online/blog?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "JigSolitaire",
+              url: "https://jigsolitaire.online",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://jigsolitaire.online/og-image.png",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                url: "https://jigsolitaire.online/contact",
+              },
             }),
           }}
         />

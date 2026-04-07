@@ -45,6 +45,32 @@ export default function BestFreePuzzleGamesPage() {
                     and replay value. Games are listed in order of our overall recommendation.
                 </p>
 
+                <h2>Why These Games Specifically</h2>
+                <p>
+                    Ten games is an opinionated number. There are hundreds of free online puzzle games
+                    available in 2026, and reasonable people will disagree about which ones belong on
+                    a list like this. The games below were selected because they are the ones we would
+                    actually recommend to a friend — not because of commercial relationships, search
+                    optimization, or padding the list for comprehensiveness.
+                </p>
+                <p>
+                    Each game on this list earned its place because it does something distinctly well.
+                    Puzzle Together for collaborative play. Chess.com and Lichess for tactical depth
+                    and community. JigSolitaire for its unique merge mechanic and clean design. The NYT
+                    games for word puzzle mastery. Nonograms for methodical logic. GeoGuessr for
+                    observation and geography. Simon Tatham&apos;s collection for variety without compromise.
+                    Sliding puzzles for spatial training. Sudoku for daily logical engagement.
+                </p>
+                <p>
+                    What you will not find here: games that are technically free but immediately push
+                    you toward payment; games that perform poorly on mobile; games where the ads are
+                    more prominent than the gameplay; or games that use dark patterns to make continued
+                    play psychologically compulsive rather than genuinely enjoyable. These qualities
+                    disqualify many otherwise reasonable games. The standard is simple: would I keep
+                    coming back to this game if I had discovered it independently, without being asked
+                    to review it? All ten passed that test.
+                </p>
+
                 <h2>1. Puzzle Together</h2>
                 <p>
                     <strong>Type:</strong> Collaborative jigsaw puzzles<br />
@@ -239,6 +265,56 @@ export default function BestFreePuzzleGamesPage() {
                     ranges from trivial to fiendish, strong cognitive benefits documented by research.<br />
                     <strong>Weaknesses:</strong> Ad-heavy on many free sites; quality varies enormously;
                     can feel repetitive after extended play.
+                </p>
+
+                <h2>A Note on Honest Evaluation</h2>
+                <p>
+                    Lists like this one are tricky to write honestly. JigSolitaire appears at number three
+                    and is the site you are currently on — that conflict of interest is disclosed directly
+                    in the entry above. Puzzle Together and Chess.com appear at one and two not because of
+                    any relationship with those companies but because they genuinely offer wider audiences
+                    more value: Puzzle Together through its unmatched collaborative feature, Chess.com
+                    through its exceptional puzzle depth and community infrastructure.
+                </p>
+                <p>
+                    What unites the best entries on this list is a shared design honesty. None of them
+                    punish players for not spending money. None run ads that interrupt gameplay at critical
+                    moments. None use artificial scarcity — energy, lives, daily limits — to manufacture
+                    frustration that can only be resolved with payment. These design principles are not
+                    universal in the free gaming space. Finding games that observe them is worth highlighting.
+                </p>
+                <p>
+                    It&apos;s also worth noting what this list does not include: flashy titles with large
+                    marketing budgets that fail on the manipulation test, and niche games with extraordinary
+                    design that almost no one has heard of. Both categories exist. The games listed here
+                    represent the sweet spot of quality, accessibility, and genuine freedom — the combination
+                    that makes a free puzzle game actually worth recommending to a friend.
+                </p>
+
+                <h2>How to Build a Puzzle Rotation</h2>
+                <p>
+                    Research on cognitive training consistently suggests that variety produces broader
+                    benefits than specialization in a single puzzle type. Crosswords train verbal fluency
+                    and vocabulary. Sudoku and chess puzzles train logical deduction. Spatial puzzles
+                    like JigSolitaire train visual-spatial reasoning and strategic planning. Each targets
+                    different cognitive systems.
+                </p>
+                <p>
+                    A practical weekly rotation might look like this: spatial puzzles (JigSolitaire or
+                    a jigsaw site) on two or three days, a logic puzzle (Sudoku or nonogram) on one
+                    or two days, and a verbal puzzle (Wordle, Connections, or a crossword) on the
+                    remaining days. The specific games matter less than the variety — what you are trying
+                    to avoid is the plateau that comes from doing the same kind of puzzle every day until
+                    it becomes automatic. Automatic is comfortable. It is not cognitively demanding. And
+                    cognitively demanding is what produces the long-term benefits the research documents.
+                </p>
+                <p>
+                    The other variable worth considering is session length. Quick daily puzzles (5–10
+                    minutes) are excellent for maintaining habits but may not provide the sustained
+                    focus that produces the largest cognitive benefits. Occasional longer sessions —
+                    30 to 60 minutes of uninterrupted puzzle time — exercise sustained concentration in
+                    a way that short sessions cannot. Both types of session have their place in a
+                    well-designed puzzle practice.
                 </p>
 
                 <h2>How to Choose the Right Puzzle Game</h2>

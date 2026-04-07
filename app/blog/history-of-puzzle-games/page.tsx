@@ -105,6 +105,34 @@ export default function HistoryPage() {
                     mechanics — but they opened the door for the innovation and variety we see today.
                 </p>
 
+                <h2>The 15-Puzzle Craze and Digital Tile Games</h2>
+                <p>
+                    Between the jigsaw puzzle&apos;s 1760s origins and the digital revolution, another
+                    puzzle format emerged that would directly shape modern digital puzzle gaming. In
+                    1874, Noyes Palmer Chapman created the 15-puzzle: fifteen numbered tiles in a 4×4
+                    grid with one empty space, requiring players to slide tiles into numerical sequence.
+                    The game became an international obsession in the 1880s, with newspapers and magazines
+                    offering cash prizes for solutions to specific configurations.
+                </p>
+                <p>
+                    What made the 15-puzzle culturally significant beyond its immediate popularity was
+                    the mathematical interest it generated. Mathematicians quickly discovered that exactly
+                    half of all starting configurations were unsolvable — a fact that drove thousands of
+                    frustrated players to consult mathematicians trying to prove the puzzle was merely
+                    very hard rather than impossible. The mathematical analysis of the 15-puzzle laid
+                    groundwork for group theory applications in combinatorics and directly influenced
+                    later work on computational complexity.
+                </p>
+                <p>
+                    When puzzle games moved to digital platforms in the 1980s and 1990s, the sliding
+                    tile format was a natural early choice — the rules were simple, the mechanic worked
+                    well with keyboard controls, and the limited graphics capabilities of early computers
+                    suited the numbered-tile format. The evolution from number tiles to image tiles
+                    came later, as graphics capabilities improved. Modern tile-swap games like JigSolitaire
+                    represent the latest iteration of a design lineage stretching directly back to
+                    Chapman&apos;s 1874 invention.
+                </p>
+
                 <h2>Modern Puzzle Innovation</h2>
                 <p>
                     Today, puzzle games have evolved far beyond their origins. Mobile games like Monument
@@ -118,6 +146,82 @@ export default function HistoryPage() {
                     classic 15-puzzle, invented by Noyes Palmer Chapman in 1874. This sliding puzzle —
                     with 15 numbered squares in a 4×4 grid — became one of the biggest toy crazes of the
                     19th century and has directly inspired countless digital variations.
+                </p>
+
+                <h2>Solitaire Before Computers</h2>
+                <p>
+                    What most people do not realize is that solitaire existed as a popular pastime for
+                    roughly 200 years before the first computer was built. The game&apos;s origins in
+                    18th-century Europe placed it firmly in a tradition of solo card play that developed
+                    alongside the broader expansion of card gaming culture. By the time of Napoleon&apos;s
+                    exile on Saint Helena — the early 19th century — multiple variants of patience games
+                    were well-established across Europe.
+                </p>
+                <p>
+                    The Victorian era was particularly productive for solitaire development. Card game
+                    historians have documented dozens of patience variants from the 19th century, each with
+                    different layouts, rules, and degrees of skill versus luck. Some games were nearly pure
+                    luck — the outcome determined almost entirely by the shuffle. Others, like Calculation
+                    and Canfield, required genuine strategic decisions that significantly affected the
+                    probability of a successful completion.
+                </p>
+                <p>
+                    Lady Adelaide Cadogan&apos;s 1870 book <em>Illustrated Games of Patience</em> was
+                    one of the first systematic collections of solitaire rules published in English.
+                    It documented 25 games and went through multiple editions, suggesting a substantial
+                    and growing audience. The book treated patience as a serious intellectual pursuit,
+                    with careful rules and analysis of each variant&apos;s strategic requirements. This
+                    framing — solitaire as a game of skill and judgment, not just time-killing — was
+                    important for its social legitimacy as a pursuit for educated adults.
+                </p>
+                <p>
+                    When Microsoft bundled Solitaire with Windows 3.0 in 1990, they were not introducing
+                    a new game. They were introducing a 200-year-old game to a new medium, and to an
+                    audience of tens of millions of office workers who had never encountered it in its
+                    original physical form. The success was not just about the game&apos;s quality —
+                    it was about how perfectly the game&apos;s structure suited the new context of
+                    desktop computing: something engaging enough to hold attention, simple enough to
+                    learn in minutes, and playable in any duration from two minutes to an hour.
+                </p>
+
+                <h2>The Jigsaw Puzzle Goes Mass Market</h2>
+                <p>
+                    The history of puzzles is also, in large part, a history of manufacturing. The shift
+                    from wooden to cardboard puzzles in the early 20th century was not just a materials
+                    change — it was a democratization. Wooden puzzles were luxury objects. Cardboard puzzles
+                    were everyman entertainment.
+                </p>
+                <p>
+                    Die-cutting technology — using metal dies to cut standardized shapes from sheets of
+                    cardboard — made mass production of puzzle pieces possible and cheap. By the 1930s,
+                    cardboard jigsaw puzzles could be manufactured for pennies and sold for a dime or a
+                    quarter. This made them affordable to families who could never have purchased a wooden
+                    puzzle, and it created the cultural phenomenon of puzzle-solving as a mass pastime.
+                </p>
+                <p>
+                    The Great Depression of the 1930s accelerated this shift dramatically. With millions
+                    unemployed and entertainment budgets reduced to almost nothing, inexpensive jigsaw
+                    puzzles became one of the most popular leisure activities in America. At peak popularity
+                    in early 1933, an estimated 10 million puzzles were sold or given away every week.
+                    Companies printed puzzles as promotional items. Rental libraries for puzzles sprang
+                    up in drugstores. The puzzle craze of the 1930s established the jigsaw as a permanent
+                    fixture of popular culture.
+                </p>
+                <p>
+                    Solitaire followed a parallel trajectory. The game existed for centuries as a private
+                    pastime — played on real cards, known only to those who sought it out. Then Microsoft
+                    bundled a digital version with Windows 3.0 in 1990, and overnight it became the most
+                    widely played game in the world. Neither story requires invention in the traditional
+                    sense — both jigsaws and solitaire existed before their mass-market moments. What
+                    changed was access, price, and distribution.
+                </p>
+                <p>
+                    The parallel to today&apos;s digital puzzle landscape is direct. Browser-based games
+                    have done to digital puzzle gaming what die-cutting did to physical jigsaws: removed
+                    the friction, reduced the cost to zero, and made access immediate. The game that
+                    previously required a purchase, a download, and an account now opens in a browser
+                    tab in three seconds. That frictionless access has expanded the audience for puzzle
+                    gaming to include millions of people who would never have identified as &ldquo;gamers.&rdquo;
                 </p>
 
                 <h2>Why Puzzles Endure</h2>

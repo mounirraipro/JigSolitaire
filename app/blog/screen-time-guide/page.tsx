@@ -93,6 +93,36 @@ export default function ScreenTimeGuidePage() {
                     passively scrolling through videos.
                 </p>
 
+                <h2>The Displacement Problem: What Screens Are Replacing</h2>
+                <p>
+                    The most consistent finding in screen time research is not that screens are inherently
+                    harmful but that they displace other activities that are clearly beneficial. Children
+                    who spend four hours per day on screens are not simply spending four hours doing
+                    something neutral — they are spending four hours not doing something else. What that
+                    &ldquo;something else&rdquo; would be varies by child and family, but the most
+                    consistently beneficial alternatives are the ones most vulnerable to displacement:
+                    physical outdoor play, face-to-face peer interaction, reading, sleep, and creative
+                    unstructured time.
+                </p>
+                <p>
+                    This framing changes the conversation usefully. Rather than asking &ldquo;are screens
+                    bad?&rdquo; — a question without a clean answer — parents can ask &ldquo;what is screen
+                    time replacing in my child&apos;s life?&rdquo; If a child is getting adequate sleep,
+                    daily physical activity, and regular in-person social time, the cognitive and emotional
+                    risks of screen time are considerably lower than the headline figures suggest.
+                    If screen time is crowding out any of those necessities, that is the actual problem —
+                    and the solution is to protect those activities, not necessarily to restrict screens
+                    in the abstract.
+                </p>
+                <p>
+                    The practical implication for family media planning: set clear rules around the
+                    non-negotiables first (bedtime, outdoor time, meals without screens), then let
+                    remaining screen time be governed more flexibly by quality rather than strict
+                    quantity. A child who has already been outside, done homework, and spent time
+                    with friends has earned leisure screen time in a different context than a child
+                    for whom screens are displacing all of the above.
+                </p>
+
                 <h2>What Research Does — and Doesn&apos;t — Tell Us</h2>
                 <p>
                     It&apos;s important to understand the limitations of screen time research. Many studies
@@ -172,6 +202,44 @@ export default function ScreenTimeGuidePage() {
                     during family time, narrate your own digital choices (&ldquo;I&apos;m going to use my
                     phone to look up this recipe, then I&apos;ll put it away&rdquo;), and demonstrate
                     that screens are tools, not constant companions.
+                </p>
+
+                <h2>The Questions Worth Actually Asking</h2>
+                <p>
+                    Rather than asking &ldquo;how much screen time is too much?&rdquo; — a question the
+                    research struggles to answer definitively — there are more productive questions parents
+                    can ask when evaluating any digital activity their child is engaged in.
+                </p>
+                <p>
+                    Is my child <em>doing</em> something or <em>watching</em> something? Passive consumption
+                    and active problem-solving use different brain systems and have measurably different
+                    developmental outcomes. A child solving puzzles is exercising spatial reasoning and
+                    executive function. A child watching videos is primarily receiving input, which is a
+                    fundamentally different cognitive experience.
+                </p>
+                <p>
+                    Is the activity displacing something important? The most consistent finding in screen
+                    time research is about displacement — screens become problematic when they crowd out
+                    sleep, physical activity, face-to-face relationships, or schoolwork. If your child
+                    is getting adequate sleep, exercising, spending time with friends, and keeping up with
+                    school, thirty extra minutes of puzzle games represents a much smaller concern than the
+                    same thirty minutes would for a child already struggling in one of those areas.
+                </p>
+                <p>
+                    Can my child stop when asked? This is a practical indicator of whether screen use
+                    has become habitual to an unhealthy degree. Most children will resist stopping mid-session
+                    because they want to finish what they are doing — that is normal. But a child who
+                    cannot stop at all, who becomes genuinely distressed or dysregulated when a session
+                    ends, is showing a sign worth paying attention to. Puzzle games, by design, have
+                    natural stopping points (puzzle completion) that actually help with this compared
+                    to endless-scroll content that has no built-in stopping mechanism.
+                </p>
+                <p>
+                    Would I be comfortable if a teacher saw this activity? This informal heuristic from
+                    education researchers is useful: if the screen activity is something you would be
+                    comfortable with your child&apos;s teacher observing, it is probably fine. Educational
+                    games, creative tools, and focused practice activities generally pass this test.
+                    Passive entertainment and social media often do not.
                 </p>
 
                 <h2>The Bottom Line</h2>

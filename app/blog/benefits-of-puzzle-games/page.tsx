@@ -38,6 +38,42 @@ export default function BenefitsPage() {
                     puzzle games a regular part of your routine.
                 </p>
 
+                <h2>What the Research Actually Shows</h2>
+                <p>
+                    Before listing specific benefits, it is worth situating what kind of evidence
+                    supports them. The research on puzzle games and cognitive health spans several
+                    decades and includes both correlational studies (which find associations between
+                    puzzle habits and cognitive function) and experimental studies (which test whether
+                    puzzle training actually causes improvements).
+                </p>
+                <p>
+                    The correlational evidence is substantial. The Exeter-Kings College PROTECT study
+                    — which followed over 19,000 participants aged 50 and above — found that adults
+                    who regularly did number and word puzzles had cognitive function equivalent to
+                    people roughly 8-10 years younger, specifically on measures of attention, reasoning,
+                    and memory. The Rush Memory and Aging Project found that frequent cognitive activity,
+                    including puzzles, was associated with a 47% lower risk of Alzheimer&apos;s diagnosis.
+                    These are large, careful studies, not small convenience samples.
+                </p>
+                <p>
+                    The experimental evidence is more limited but still meaningful. The ACTIVE trial —
+                    one of the largest cognitive training randomized controlled trials ever conducted,
+                    with nearly 3,000 participants followed for 10 years — demonstrated that training
+                    in reasoning and processing speed (skills closely related to puzzle solving) produced
+                    improvements that persisted for a decade and reduced rates of functional decline in
+                    daily life.
+                </p>
+                <p>
+                    Where the evidence is weaker is in demonstrating that any specific commercial
+                    brain training product or puzzle type produces large, broad-spectrum improvements
+                    in people who are already healthy and cognitively active. The benefits appear most
+                    clearly for people who are not already engaging in sufficient cognitive stimulation —
+                    for those people, adding a regular puzzle habit is associated with meaningful
+                    improvements. The effect for people who are already highly cognitively engaged may
+                    be smaller. That caveat does not undermine the case for puzzle habits — it just
+                    helps calibrate realistic expectations.
+                </p>
+
                 <h2>1. Enhanced Short-Term Memory</h2>
                 <p>
                     When you work on a puzzle, you need to remember shapes, colors, and positions — which
@@ -110,6 +146,104 @@ export default function BenefitsPage() {
                     improvements that persisted for up to 10 years. Puzzle-solving improves processing
                     speed — how quickly your brain can take in information and respond. Over time, this
                     means faster thinking and decision-making in everyday situations.
+                </p>
+
+                <h2>The Compound Effect Over Time</h2>
+                <p>
+                    None of the seven benefits described above arrive overnight. This is worth saying
+                    plainly, because the wellness industry often overpromises on timelines. Working memory
+                    does not measurably improve after three puzzle sessions. Visual-spatial reasoning
+                    does not sharpen after a week. The research supporting these benefits typically involves
+                    months or years of consistent engagement.
+                </p>
+                <p>
+                    This is actually good news, not bad news. It means that the effort you put into puzzle
+                    solving compounds over time in the same way that physical exercise does. A person who
+                    has solved puzzles regularly for two years has built cognitive habits — patterns of
+                    attention, visual scanning, strategic thinking — that a two-week intensive puzzle session
+                    cannot replicate. The value accumulates gradually and becomes durable in a way that
+                    crash-course cognitive training does not.
+                </p>
+                <p>
+                    It also means that starting matters more than where you start. Someone who picks up
+                    puzzle solving at 55 and maintains the habit for fifteen years will have built more
+                    meaningful cognitive reserve than someone who plays intensively for six months and
+                    then stops. The literature on cognitive aging is particularly clear on this: it is the
+                    sustained, lifelong pattern of cognitive engagement that correlates most strongly with
+                    preserved function in later life.
+                </p>
+                <p>
+                    The practical implication is to prioritize consistency over intensity. A 15-minute
+                    daily puzzle session, maintained for years, will produce more meaningful cognitive benefit
+                    than an occasional two-hour marathon session. Find the habit structure that fits your
+                    life and protect it. The brain benefits from the habit as much as from any individual session.
+                </p>
+
+                <h2>Which Type of Puzzle Is Right for Which Benefit?</h2>
+                <p>
+                    The research makes clear that different puzzle types target different cognitive systems.
+                    If you have a specific cognitive goal in mind, matching your puzzle practice to that
+                    goal makes sense:
+                </p>
+                <p>
+                    For <strong>visual-spatial reasoning and working memory</strong>, image-based tile
+                    puzzles and jigsaw puzzles are most directly relevant. These formats explicitly
+                    require holding spatial information in mind and manipulating visual representations —
+                    the cognitive operations central to both skills.
+                </p>
+                <p>
+                    For <strong>verbal fluency and vocabulary</strong>, crosswords and word games (Wordle,
+                    Spelling Bee) are the better choice. Verbal puzzles exercise language-related memory
+                    systems that spatial puzzles largely bypass. For people concerned about maintaining
+                    verbal sharpness — particularly relevant for writers, teachers, and professionals who
+                    use language extensively — verbal puzzles should be part of the rotation.
+                </p>
+                <p>
+                    For <strong>logical reasoning and processing speed</strong>, number puzzles (Sudoku),
+                    chess tactics, and logic grid puzzles engage the analytical reasoning systems that
+                    govern structured problem-solving. These formats train the ability to hold constraints
+                    in mind and deduce valid conclusions — skills that transfer broadly to analytical work.
+                </p>
+                <p>
+                    For <strong>stress reduction and flow states</strong>, the format matters less than
+                    the difficulty calibration. Any puzzle that sits in the right challenge zone — hard
+                    enough to absorb your attention completely, easy enough not to cause frustration —
+                    can produce the flow state associated with cortisol reduction and improved well-being.
+                    The key is finding the difficulty sweet spot, not the specific puzzle type.
+                </p>
+
+                <h2>A Note on the Evidence</h2>
+                <p>
+                    It would be dishonest to present puzzle game benefits as though they are settled science
+                    without any caveats. The research is genuine and substantial, but there are nuances
+                    worth understanding.
+                </p>
+                <p>
+                    Most studies on puzzle benefits are correlational — they find that people who do
+                    puzzles regularly tend to have stronger cognitive function, but they cannot definitively
+                    establish that the puzzles caused the difference. It is possible that people with
+                    stronger cognitive function are simply more likely to seek out and enjoy puzzle activities
+                    in the first place. This reverse causation is difficult to rule out entirely, though
+                    the longitudinal studies that follow people over decades provide stronger evidence than
+                    single-point measurements.
+                </p>
+                <p>
+                    The &ldquo;transfer&rdquo; question — whether skill in a specific type of puzzle translates
+                    to real-world cognitive improvements — is also genuinely contested. Commercial brain
+                    training companies have faced regulatory action for overstating this transfer, and the
+                    scientific community remains appropriately cautious. What is well-established is that
+                    puzzles exercise specific cognitive skills (working memory, visual-spatial processing,
+                    attention) and that these skills have real-world applications. The degree to which
+                    regular puzzle practice produces lasting neurological changes in healthy adults is still
+                    being researched.
+                </p>
+                <p>
+                    What the research does consistently show is that puzzles are an effective and enjoyable
+                    form of cognitive stimulation, that cognitive stimulation matters for long-term brain
+                    health, and that the habits built around puzzle practice — sustained focus, deliberate
+                    problem-solving, regular cognitive engagement — are genuinely beneficial regardless of
+                    whether the specific puzzle skills transfer directly. That is a strong enough case to
+                    make puzzles a worthwhile regular habit.
                 </p>
 
                 <h2>Making Puzzles Part of Your Routine</h2>

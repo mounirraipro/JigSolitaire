@@ -205,6 +205,42 @@ export default function MindfulnessPage() {
                     present-moment experience is the essence of mindfulness.
                 </p>
 
+                <h2>What Mindfulness Research Says About Active vs. Passive Focus</h2>
+                <p>
+                    A common misconception about mindfulness is that it requires a passive, empty mind —
+                    the classic image of sitting cross-legged in complete silence, thinking nothing. This
+                    is not what mindfulness actually involves, and it explains why traditional meditation
+                    is so difficult for most beginners. The mind does not become quiet because you instruct
+                    it to. It quiets — temporarily and incompletely — when it is given something specific
+                    and absorbing to focus on.
+                </p>
+                <p>
+                    Mindfulness research increasingly recognizes that there are multiple paths to the
+                    present-moment awareness that meditation aims to cultivate. What they share is not
+                    the specific technique but the functional state: full engagement with what is happening
+                    right now, without judgment and without the mental time-traveling (worrying about
+                    the future, ruminating about the past) that characterizes the unguided mind.
+                </p>
+                <p>
+                    Jon Kabat-Zinn, who developed Mindfulness-Based Stress Reduction (MBSR) and is
+                    largely responsible for bringing mindfulness into clinical practice, has described
+                    mindfulness as &ldquo;paying attention, in a particular way, on purpose, in the present
+                    moment, non-judgmentally.&rdquo; Notice that this definition says nothing about
+                    sitting still, breathing in any specific way, or thinking nothing. It describes
+                    a quality of attention that can be cultivated through many different activities —
+                    including puzzle solving.
+                </p>
+                <p>
+                    The key phrase is &ldquo;on purpose.&rdquo; The difference between mindless puzzle
+                    solving — rushing through moves on autopilot to reach the completion screen —
+                    and mindful puzzle solving is intentionality. Approaching a puzzle as an opportunity
+                    to practice present-moment attention, to notice what you are perceiving and how you
+                    are responding, transforms the activity into something that genuinely overlaps with
+                    formal mindfulness practice. The external structure of the puzzle — its demands on
+                    your attention, its feedback on each move — makes this easier than open meditation
+                    for most people.
+                </p>
+
                 <h2>The Bigger Picture</h2>
                 <p>
                     Puzzles and mindfulness share a fundamental orientation: both invite you to be fully

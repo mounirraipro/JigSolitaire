@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ArticleSchemaInjector from '../components/ArticleSchemaInjector';
 
 export const metadata: Metadata = {
     title: 'Blog – Puzzle Tips, News & Insights',
@@ -14,5 +15,10 @@ export default function BlogLayout({
 }: {
     children: React.ReactNode;
 }) {
-    return <>{children}</>;
+    return (
+        <>
+            <ArticleSchemaInjector />
+            {children}
+        </>
+    );
 }

@@ -39,6 +39,40 @@ export default function FamilyGameNightPage() {
                     and creates the kind of positive memories that anchor family identity.
                 </p>
 
+                <h2>What Families Are Missing Without Game Night</h2>
+                <p>
+                    Something has been quietly lost in the shift to individual screens. For most of human
+                    history, leisure was by definition shared — people gathered around fires, told stories,
+                    played games together. The household with multiple individual screens is historically
+                    novel, and the research is beginning to document what this novelty costs.
+                </p>
+                <p>
+                    A 2023 survey by the American Psychological Association found that adults who regularly
+                    engaged in shared family activities reported significantly higher family satisfaction,
+                    stronger feelings of belonging, and lower rates of depression than those who spent most
+                    of their home time on individual screens. The correlation is not surprising, but the
+                    magnitude was: the effect of regular shared activities was comparable to the effect
+                    of having a close confidant — one of the strongest predictors of psychological well-being
+                    in the literature.
+                </p>
+                <p>
+                    For children, the data is particularly clear. Kids who eat dinner with their families
+                    regularly show better academic outcomes, lower rates of substance use, and stronger
+                    emotional regulation than those who do not — and the family dinner research generalizes
+                    to other forms of regular shared family activity. The meal itself matters less than
+                    the consistent, face-to-face connection it enables. Family game night provides the
+                    same thing: a reliable, recurring context for connection that does not depend on
+                    anything going right in anyone&apos;s individual life that week.
+                </p>
+                <p>
+                    This context matters because family connection is not something that can be crammed
+                    into occasional big events. The research consistently shows that it accumulates through
+                    small, regular interactions. A family that plays puzzles together for ninety minutes
+                    every Friday builds something that a once-a-year vacation cannot replicate: a lived
+                    sense of being in each other&apos;s company, navigating something together, laughing at the
+                    same things.
+                </p>
+
                 <h2>The Science of Shared Play</h2>
                 <p>
                     Family play isn&apos;t just fun — it&apos;s a fundamental developmental necessity.
@@ -170,6 +204,53 @@ export default function FamilyGameNightPage() {
                     The ideal approach for many families combines both: digital puzzles for convenience
                     and variety, physical puzzles for the tactile, meditative experience of working with
                     tangible pieces.
+                </p>
+
+                <h2>When It Doesn&apos;t Go Well</h2>
+                <p>
+                    Not every family puzzle night goes smoothly, and it&apos;s worth being honest about this.
+                    Sometimes a child gets frustrated and wants to quit. Sometimes siblings argue over who
+                    gets to put in the final piece. Sometimes parents are too tired after a long week to
+                    engage with genuine enthusiasm. These are not failures — they&apos;re normal.
+                </p>
+                <p>
+                    The important thing is to avoid forcing it. A family game night that ends in conflict
+                    or resentment is counterproductive to the bonding goals you started with. It&apos;s better
+                    to stop early and come back next week with fresh energy than to push through when the
+                    mood is wrong. Traditions survive through flexibility, not rigidity. The families that
+                    maintain game nights for decades are typically the ones who treat the schedule as a
+                    strong preference rather than an inviolable rule.
+                </p>
+                <p>
+                    One useful approach: keep a variety of puzzle options available so you can adjust to
+                    the room&apos;s energy. A 500-piece jigsaw is a commitment. A quick digital tile puzzle
+                    at the easiest setting is a 10-minute activity that anyone can contribute to. Having
+                    both available means you can calibrate to how the evening is actually going rather
+                    than how you planned it.
+                </p>
+
+                <h2>Building a Tradition Worth Keeping</h2>
+                <p>
+                    The families who sustain game nights over years are not those with the most elaborate
+                    setups or the most competitive spirit. They tend to be families where the ritual itself
+                    has been protected — where everyone understands that this time is genuinely set aside
+                    and that other commitments can work around it rather than through it.
+                </p>
+                <p>
+                    Small rituals within the ritual help. Some families always order the same takeout on
+                    puzzle night. Others put the same playlist on in the background. A few have a specific
+                    jar they drop puzzle-night memories into — a slip of paper saying which puzzle they
+                    finished, how long it took, what funny thing happened. These details sound small but
+                    they accumulate into something meaningful. The specific puzzles get forgotten. The
+                    feeling of the night stays.
+                </p>
+                <p>
+                    What research captures in data — the oxytocin, the shared attention, the cooperative
+                    activation in neural networks — lived experience captures differently. Children who
+                    grow up with consistent family game nights often describe them as something they
+                    deeply valued, even if they couldn&apos;t have articulated why at the time. They carry the
+                    template forward: when they form their own families, they tend to create the same
+                    kinds of rituals. The tradition propagates not through instruction but through memory.
                 </p>
 
                 <h2>Making It Last</h2>
