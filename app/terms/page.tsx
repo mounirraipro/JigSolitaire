@@ -130,7 +130,7 @@ export default function TermsPage() {
                 <p>
                     If you have any questions about these Terms of Service, please reach out through
                     our <a href="/contact">Contact page</a> or email us at{' '}
-                    <strong>legal@jigsolitaire.online</strong>.
+                    <strong>contact@jigsolitaire.online</strong>.
                 </p>
             </div>
         </>

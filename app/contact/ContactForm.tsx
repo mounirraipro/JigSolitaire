@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const SUPPORT_EMAIL = 'hello@jigsolitaire.online';
+const SUPPORT_EMAIL = 'contact@jigsolitaire.online';
 
 export default function ContactForm() {
     const [submitted, setSubmitted] = useState(false);

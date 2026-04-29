@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactForm from './ContactForm';
 
-const SUPPORT_EMAIL = 'hello@jigsolitaire.online';
+const SUPPORT_EMAIL = 'contact@jigsolitaire.online';
 
 export const metadata: Metadata = {
     title: 'Contact JigSolitaire',

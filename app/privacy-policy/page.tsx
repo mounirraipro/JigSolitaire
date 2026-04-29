@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
                 <p>
                     If you have any questions about this Privacy Policy or our data practices, please
                     contact us through our <a href="/contact">Contact page</a> or email us at{' '}
-                    <strong>privacy@jigsolitaire.online</strong>.
+                    <strong>contact@jigsolitaire.online</strong>.
                 </p>
             </div>
         </>
