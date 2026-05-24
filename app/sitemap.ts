@@ -26,6 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogPosts = [
+    { path: '/blog/puzzle-table-setup-small-spaces', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/visual-memory-puzzle-solving', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/cooperative-puzzle-games-family', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/puzzle-breaks-at-work', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/blog/no-download-puzzle-games-guide', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/how-to-get-better-at-jigsaw-puzzles', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/are-puzzles-good-for-anxiety-and-stress', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/blog/best-puzzle-routine-for-busy-adults', priority: 0.6, changeFrequency: 'monthly' as const },

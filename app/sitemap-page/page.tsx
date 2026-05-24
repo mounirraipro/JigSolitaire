@@ -33,6 +33,11 @@ const sections = [
         title: 'Blog',
         links: [
             { href: '/blog', label: 'Blog Home' },
+            { href: '/blog/puzzle-table-setup-small-spaces', label: 'How to Set Up a Puzzle Table in a Small Space' },
+            { href: '/blog/visual-memory-puzzle-solving', label: 'Visual Memory and Puzzle Solving' },
+            { href: '/blog/cooperative-puzzle-games-family', label: 'Cooperative Puzzle Games for Families' },
+            { href: '/blog/puzzle-breaks-at-work', label: 'Puzzle Breaks at Work' },
+            { href: '/blog/no-download-puzzle-games-guide', label: 'No-Download Puzzle Games Guide' },
             { href: '/blog/how-to-get-better-at-jigsaw-puzzles', label: 'How to Get Better at Jigsaw Puzzles' },
             { href: '/blog/are-puzzles-good-for-anxiety-and-stress', label: 'Are Puzzles Good for Anxiety and Stress?' },
             { href: '/blog/best-puzzle-routine-for-busy-adults', label: 'Best Puzzle Routine for Busy Adults' },
