@@ -259,48 +259,53 @@
   }
 
   // ==========================================
-  // GAME DATA — ALL 3×3 ONLY (NOW DYNAMIC)
+  // GAME DATA — static export friendly
   // ==========================================
-  let CATEGORIES = [];
+  const CATEGORY_DEFINITIONS = [
+    { slug: 'animals', name: 'Animals', color: '#ef4444', count: 30 },
+    { slug: 'art', name: 'Art', color: '#e17055', count: 11 },
+    { slug: 'cities', name: 'Cities', color: '#6c5ce7', count: 36 },
+    { slug: 'food', name: 'Food', color: '#fdcb6e', count: 11 },
+    { slug: 'nature', name: 'Nature', color: '#22c55e', count: 32 },
+  ];
 
-  async function loadCategories() {
-    try {
-      const btnPlay = document.getElementById('btn-play');
-      if (btnPlay) {
-        btnPlay.innerText = 'Loading...';
-        btnPlay.style.pointerEvents = 'none';
-        btnPlay.style.opacity = '0.7';
-      }
-      
-      const res = await fetch('/api/categories');
-      const data = await res.json();
-      
-      CATEGORIES = data.map(cat => ({
+  function titleFromFile(fileName) {
+    return fileName
+      .replace(/\.[^/.]+$/, '')
+      .replace(/[_-]/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function buildStaticCategories() {
+    let levelId = 1;
+
+    return CATEGORY_DEFINITIONS.map(cat => {
+      const levels = Array.from({ length: cat.count }, (_, index) => {
+        const fileName = `JigSolitaire_${cat.name}${index + 1}.png`;
+        const thumbName = `JigSolitaire_${cat.name}${index + 1}.webp`;
+
+        return {
+          id: levelId++,
+          title: titleFromFile(fileName),
+          cols: 3,
+          rows: 3,
+          img: fileName,
+          thumb: thumbName,
+        };
+      });
+
+      return {
         slug: cat.slug,
         name: cat.name,
         color: cat.color,
-        img: cat.levels.length > 0 ? cat.levels[0].imageKeyword : '',
-        thumb: cat.levels.length > 0 ? cat.levels[0].imageThumbnail : '',
-        levels: cat.levels.map(l => ({
-          id: l.id,
-          title: l.title,
-          cols: l.gridCols,
-          rows: l.gridRows,
-          img: l.imageKeyword,
-          thumb: l.imageThumbnail
-        }))
-      }));
-      
-      if (btnPlay) {
-        btnPlay.innerText = 'Play';
-        btnPlay.style.pointerEvents = 'auto';
-        btnPlay.style.opacity = '1';
-      }
-    } catch (e) {
-      console.error('Failed to load dynamic levels:', e);
-    }
+        img: levels[0]?.img || '',
+        thumb: levels[0]?.thumb || '',
+        levels,
+      };
+    });
   }
-  loadCategories();
+
+  const CATEGORIES = buildStaticCategories();
 
   // ==========================================
   // PROGRESS (localStorage)
