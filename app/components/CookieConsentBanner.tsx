@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
 
 const CONSENT_STORAGE_KEY = 'jigsolitaire-ad-consent';
 const CONSENT_COOKIE_KEY = 'jigsolitaire_ad_consent';
@@ -12,22 +12,38 @@ function getStoredConsent() {
     return window.localStorage.getItem(CONSENT_STORAGE_KEY);
 }
 
+function getServerConsentSnapshot() {
+    return 'pending';
+}
+
 function persistConsent(value: 'granted' | 'denied') {
     window.localStorage.setItem(CONSENT_STORAGE_KEY, value);
     document.cookie = `${CONSENT_COOKIE_KEY}=${value}; path=/; max-age=31536000; SameSite=Lax`;
     window.dispatchEvent(new Event(CONSENT_EVENT));
 }
 
+function subscribeToConsent(onStoreChange: () => void) {
+    if (typeof window === 'undefined') return () => {};
+
+    const handleStorage = (event: StorageEvent) => {
+        if (event.key === CONSENT_STORAGE_KEY) {
+            onStoreChange();
+        }
+    };
+
+    window.addEventListener(CONSENT_EVENT, onStoreChange);
+    window.addEventListener('storage', handleStorage);
+
+    return () => {
+        window.removeEventListener(CONSENT_EVENT, onStoreChange);
+        window.removeEventListener('storage', handleStorage);
+    };
+}
+
 export default function CookieConsentBanner() {
-    const [consent, setConsent] = useState<string | null>(null);
-    const [mounted, setMounted] = useState(false);
+    const consent = useSyncExternalStore(subscribeToConsent, getStoredConsent, getServerConsentSnapshot);
 
-    useEffect(() => {
-        setConsent(getStoredConsent());
-        setMounted(true);
-    }, []);
-
-    if (!mounted || consent) {
+    if (consent) {
         return null;
     }
 
@@ -65,7 +81,6 @@ export default function CookieConsentBanner() {
                         className="btn btn-primary"
                         onClick={() => {
                             persistConsent('granted');
-                            setConsent('granted');
                         }}
                     >
                         Accept ad cookies
@@ -75,7 +90,6 @@ export default function CookieConsentBanner() {
                         className="btn btn-secondary"
                         onClick={() => {
                             persistConsent('denied');
-                            setConsent('denied');
                         }}
                     >
                         Decline

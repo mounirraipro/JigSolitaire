@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "echo \"Static export: serve the out directory with your web server\"",
     "lint": "eslint",
     "generate:level-thumbs": "python scripts/generate_level_thumbnails.py"
   },

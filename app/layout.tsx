@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AdSenseLoader from './components/AdSenseLoader';
 import CookieConsentBanner from './components/CookieConsentBanner';
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -128,7 +115,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${outfit.variable}`}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

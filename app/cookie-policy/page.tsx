@@ -63,7 +63,7 @@ export default function CookiePolicyPage() {
 
                 <h3>Preference Cookies & Local Storage</h3>
                 <p>
-                    We use your browser's Local Storage to remember choices you make on the website, such as your preferred sound settings and your game progress, to provide a more personalized experience without needing an account.
+                    We use your browser&apos;s Local Storage to remember choices you make on the website, such as your preferred sound settings and your game progress, to provide a more personalized experience without needing an account.
                 </p>
 
                 <h2>Third-Party Cookies</h2>

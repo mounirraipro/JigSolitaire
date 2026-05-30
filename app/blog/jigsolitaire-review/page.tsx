@@ -120,7 +120,7 @@ export default function JigSolitaireReviewPage() {
                     excellent. The Animals category leans into vibrant, high-contrast shots of wildlife that
                     are particularly satisfying to reconstruct. The Art category features paintings and
                     illustrated works that challenge colour interpretation in a different way from photographs.
-                    The Food category's close-up texture shots are surprisingly difficult to navigate because
+                    The Food category&apos;s close-up texture shots are surprisingly difficult to navigate because
                     the tiles are visually similar — a good challenge for experienced solvers.
                 </p>
                 <p>
